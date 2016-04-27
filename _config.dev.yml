@@ -1,0 +1,6 @@
+title                    : "Glenn Sarti (DEV)"
+url                      : ""
+port                     : 4000
+
+sass:
+  style:            :expanded
