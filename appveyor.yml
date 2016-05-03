@@ -1,4 +1,7 @@
 version: 1.0.{build}
+branches:
+  except:
+  - dev
 build_script:
 - cmd: >-
     ECHO Setting Ruby 2.2 as default

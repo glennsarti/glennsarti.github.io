@@ -1,5 +1,4 @@
-![Build status](https://ci.appveyor.com/api/projects/status/proxb7dvuo7nhgtk/branch/master?svg=true)](https://ci.appveyor.com/project/glennsarti/glennsarti-github-io/branch/master)
-
+[![Build status](https://ci.appveyor.com/api/projects/status/proxb7dvuo7nhgtk?svg=true)](https://ci.appveyor.com/project/glennsarti/glennsarti-github-io)
 ---
 Blog site for Glenn Sarti.
 
