@@ -19,9 +19,9 @@ permalink                : pretty
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "facebook", "google-plus", custom"
+  provider               : "disqus" # false (default), "disqus", "facebook", "google-plus", custom"
   disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : "devops-for-the-win" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   facebook:
     # https://developers.facebook.com/docs/plugins/comments
     appid                :
@@ -64,9 +64,9 @@ google_ad_slot           :
 author:
   name             : "Glenn Sarti"
   avatar           : "bio-photo.jpg"
-  bio              : "Insert witty profile thing here..."
+  bio              : "Windows Software and Infrastructure Developer.<br /><br />With a penchant for DevOps, Puppet, Neo4j or anything Windows related."
   location         : "Portland OR, USA"
-  email            : "glenn.sarti@outlook.com"
+  #email            : "glenn.sarti@outlook.com"
   # uri              :
   # bitbucket        :
   # codepen          :
