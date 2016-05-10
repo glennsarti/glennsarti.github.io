@@ -73,3 +73,12 @@ namespace :serve do
   end
 
 end
+
+namespace :watch do
+  desc 'Serve and watch Jekyll with development settings'
+  task :dev => [:clean] do
+    puts 'Building Jekyll with DEVELOPMENT settings...'
+    system "JEKYLL_ENV=development jekyll serve #{basicSettings} #{devConfig} --watch"
+  end
+
+end
