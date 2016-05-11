@@ -9,8 +9,8 @@
 locale                   : "en"
 title                    : "Glenn Sarti"
 title_separator          : "-"
-name                     : "Glenn Sarti"
-description              : "description"
+name                     : "Blog site for Glenn Sarti"
+description              : "Stuff about Windows, Devops, Puppet and Neo4j related"
 url                      : "http://glennsarti.github.io"
 baseurl                  : ""
 gh_repo                  :
