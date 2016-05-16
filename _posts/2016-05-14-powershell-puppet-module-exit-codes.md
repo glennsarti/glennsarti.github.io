@@ -132,11 +132,11 @@ exit 0
 ---
 More information on [-ErrorAction](https://technet.microsoft.com/en-us/library/hh847884.aspx)
 
-More infomration on [$ErrorActionPreference](https://technet.microsoft.com/en-us/library/hh847796.aspx)
+More information on [$ErrorActionPreference](https://technet.microsoft.com/en-us/library/hh847796.aspx)
 
 ## OnlyIf/Unless
 
-The Puppet `exec` resource has [OnlyIf](http://somewhere) and [Unless](http://somewhere) attributes which can be used to limit when the command is invoked; e.g. Create this file only if it does not exist, or Start this windows service unless it's already running.
+The Puppet `exec` resource has [OnlyIf](https://docs.puppet.com/puppet/latest/reference/types/exec.html#exec-attribute-onlyif) and [Unless](https://docs.puppet.com/puppet/latest/reference/types/exec.html#exec-attribute-unless) attributes which can be used to limit when the command is invoked; e.g. Create this file only if it does not exist, or Start this windows service unless it's already running.
 
 The onlyif parameter is defined as
 
