@@ -261,6 +261,12 @@ Notice: Applied catalog in 18.28 secondss
 
 * Watch out for Terminating Errors as the exec resource will not run if they are thrown
 
+Example
+
+>  Create an exec resource that;
+>  
+>  Starts the FOO service unless, it doesn't exist or it exists and is already running
+
 {% highlight puppet %}
 # Don't do this
 
@@ -272,6 +278,8 @@ exec { 'Start FOO':
   provider  => powershell,
 }
 {% endhighlight %}
+
+In the example above, if the service doesn't exist it will throw a non-terminating error and then process the next command.  Remembering the previous weird test case, it will then execute the exec resource, attempting to start a service that does not exist.  However, this is not what we wanted.
 
 {% highlight puppet %}
 # Do this instead
@@ -285,4 +293,4 @@ exec { 'Start FOO':
 }
 {% endhighlight %}
 
-Without the `else { Exit 0 }` the exec resource will fail on computers without the FOO service.
+Now that there is an explicit `Exit 0`, the previous non-terminating error is ignored and the exec resource behaves as we wanted.
