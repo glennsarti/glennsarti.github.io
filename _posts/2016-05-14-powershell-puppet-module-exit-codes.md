@@ -6,11 +6,14 @@ category:
 tags:
   - puppet
   - powershell
+modified-date: 2016-05-18
 ---
 
 [Puppet](http://www.puppet.com) is a Configuration Management product which can be use to manage Infrastructure and applications.  It has great support for Windows, including a module on the [Puppet Forge](https://forge.puppet.com/puppetlabs/powershell) to run Powershell based commands.  There are some instructions in the README to help people use the module, but there a few traps for people starting out.
 
-This post refers to version 1.x of the [Puppet Powershell module](https://forge.puppet.com/puppetlabs/powershell/1.0.6/readme)
+This post refers to version 1.0.6 of the [Puppet Powershell module](https://forge.puppet.com/puppetlabs/powershell/1.0.6/readme)
+
+Update - [What's changed in version 2.0.0](/blog/powershell-puppet-module-exit-codes-update/) 
 
 ## Powershell Exit Codes
 
@@ -152,72 +155,72 @@ Using what we know about powershell exit codes a simple test manifest can be use
 # OnlyIf tests
 exec { 'onlyif check exit 0':
   command  => '"OnlyifExit0"',
-  onlyif => 'exit 0',
-  provider  => powershell,
+  onlyif   => 'exit 0',
+  provider => powershell,
 } ->
 
 exec { 'onlyif check exit 1':
   command  => '"OnlyifExit1"',
-  onlyif => 'exit 1', 
-  provider  => powershell,
+  onlyif   => 'exit 1', 
+  provider => powershell,
 } ->
 
 exec { 'onlyif check noexit':
   command  => '"OnlyifNoExit"',
-  onlyif => '',
-  provider  => powershell,
+  onlyif   => '',
+  provider => powershell,
 } ->
 
 exec { 'onlyif check non-term error':
   command  => '"OnlyifNonTerm"',
-  onlyif => 'Get-Service -Name IDontExist;',
-  provider  => powershell,
+  onlyif   => 'Get-Service -Name IDontExist;',
+  provider => powershell,
 } ->
 
 exec { 'onlyif check term error':
   command  => '"OnlyifTerm"',
-  onlyif => 'Get-Service -Name IDontExist -ErrorAction Stop',
-  provider  => powershell,
+  onlyif   => 'Get-Service -Name IDontExist -ErrorAction Stop',
+  provider => powershell,
 }  ->
 
 # Unless tests
 exec { 'unless check exit 0':
   command  => '"UnlessExit0"',
-  unless => 'exit 0',
-  provider  => powershell,
+  unless   => 'exit 0',
+  provider => powershell,
 } ->
 
 exec { 'unless check exit 1':
   command  => '"UnlessExit1"',
-  unless => 'exit 1',
-  provider  => powershell,
+  unless   => 'exit 1',
+  provider => powershell,
 } ->
 
 exec { 'unless check noexit':
   command  => '"UnlessNoExit"',
-  unless => '',
-  provider  => powershell,
+  unless   => '',
+  provider => powershell,
 } ->
 
 exec { 'unless check non-term error':
   command  => '"UnlessNonTerm"',
-  onlyif => 'Get-Service -Name IDontExist;',
-  provider  => powershell,
+  unless   => 'Get-Service -Name IDontExist;',
+  provider => powershell,
 } ->
 
 exec { 'unless check term error':
   command  => '"UnlessTerm"',
-  onlyif => 'Get-Service -Name IDontExist -ErrorAction Stop',
-  provider  => powershell,
+  unless   => 'Get-Service -Name IDontExist -ErrorAction Stop',
+  provider => powershell,
 }
 {% endhighlight %}
 ```
-Notice: Compiled catalog for win-edson23cglf.localdomain in environment production in 0.16 seconds
+Notice: Compiled catalog for win-edson23cglf.localdomain in environment production in 0.17 seconds
 Notice: /Stage[main]/Main/Exec[onlyif check exit 0]/returns: executed successfully
 Notice: /Stage[main]/Main/Exec[onlyif check noexit]/returns: executed successfully
-Notice: /Stage[main]/Main/Exec[onlyif check non-term error then command]/returns: executed successfully
 Notice: /Stage[main]/Main/Exec[unless check exit 1]/returns: executed successfully
-Notice: /Stage[main]/Main/Exec[unless check non-term error then command]/returns: executed successfully
+Notice: /Stage[main]/Main/Exec[unless check non-term error]/returns: executed successfully
+Notice: /Stage[main]/Main/Exec[unless check term error]/returns: executed successfully
 Notice: Applied catalog in 18.28 secondss
 ```
 So what did these tests show ...
@@ -226,40 +229,41 @@ So what did these tests show ...
 
 * The no exit code set tests (`onlyif check noexit` and `unless check noexit`) behaved exactly as the documentation stated; as if it returned exit code 0
 
-* The terminating error and non-terminating tests (`onlyif check non-term error`, `onlyif check term error`, `unless check non-term error` and `unless check term error`) did not behave correctly.  In all cases the exec resource was not run.  This isn't documented but kind of makes sense; If an error occurs in determining whether the exec resource should run, then the resource should not be executed.
+* The terminating error tests (`onlyif check term error` and `unless check term error`) behaved exactly as the documentation stated; Remebering that powershell returns exit code 1 for terminating errors
 
+* The non-terminating error tests (`onlyif check non-term error` and `unless check non-term error`) are a bit strange.  They behaved as if Powershell had returned an exit code of 1, but our powershell tests in the previous section showed that non-terminating errors return zero
 
-So we've confirmed that the Powershell module is looking at errors and changes the exec behaviour in addition to exit codes.  So as one last test, what would happen if a non-terminating error was thrown but continued with other commands? 
+So as one last test, what would happen if a non-terminating error was thrown but continued with other commands? Let's add `Write-Host "Hello"` to the end of the onlyif and unless and see what happens
 
 {% highlight puppet %}
 # OnlyIf tests
 exec { 'onlyif check non-term error then command':
   command  => '"OnlyifNonTermThenCommand"',
-  onlyif => 'Get-Service -Name IDontExist; Write-Host "Hello"',
-  provider  => powershell,
+  onlyif   => 'Get-Service -Name IDontExist; Write-Host "Hello"',
+  provider => powershell,
 } ->
 
 # Unless tests
 exec { 'unless check non-term error then command':
   command  => '"UnlessNonTermThenCommand"',
-  onlyif => 'Get-Service -Name IDontExist; Write-Host "Hello"',
-  provider  => powershell,
+  onlyif   => 'Get-Service -Name IDontExist; Write-Host "Hello"',
+  provider => powershell,
 } ->
 {% endhighlight %}
 ```
 Notice: Compiled catalog for win-edson23cglf.localdomain in environment production in 0.16 seconds
 Notice: /Stage[main]/Main/Exec[onlyif check non-term error then command]/returns: executed successfully
-Notice: /Stage[main]/Main/Exec[unless check non-term error then command]/returns: executed successfully
 Notice: Applied catalog in 18.28 secondss
 ```
+_What happened there?!?!_ So now the non-terminating errors are behaving like Powershell returned exit code 0.
 
-* The non-terminating followed by a succesful command tests (`onlyif check non-term error then command` and `unless check non-term error then command`) result is just weird! In all cases the exec resource was executed!
+It appears that the exit code is being determined by the **last command** executed.  This can cause a lot of headaches when debugging onlyif and unless clauses.
 
 ### What does this all mean?
 
 * Always use explicit exit codes
 
-* Watch out for Terminating Errors as the exec resource will not run if they are thrown
+* Watch out for Terminating Errors as the exec resource will treat them as non zero exit codes
 
 Example
 
