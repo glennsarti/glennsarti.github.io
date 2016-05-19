@@ -23,7 +23,7 @@ task :clean do
 end
 
 basicSettings = '--trace --no-watch --safe'
-devConfig = '--config _config.yml,_config.dev.yml'
+devConfig = '--config _config.yml,_config.dev.yml --drafts'
 
 namespace :build do
 
