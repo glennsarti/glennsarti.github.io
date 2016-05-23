@@ -6,7 +6,7 @@ category:
 tags:
   - puppet
   - powershell
-modified-date: 2016-05-18
+modified: 2016-05-18
 ---
 
 [Puppet](http://www.puppet.com) is a Configuration Management product which can be use to manage Infrastructure and applications.  It has great support for Windows, including a module on the [Puppet Forge](https://forge.puppet.com/puppetlabs/powershell) to run Powershell based commands.  There are some instructions in the README to help people use the module, but there a few traps for people starting out.
