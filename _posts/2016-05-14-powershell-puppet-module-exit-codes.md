@@ -26,7 +26,7 @@ Unlike a lot scripting languages, Powershell has the concept of terminating and 
 Take this very simple batch file;
 {% highlight powershell %}
 @ECHO OFF
-powershell.exe "& { exit 255}"
+powershell.exe "& { exit 255 }"
 ECHO Errorlevel %ERRORLEVEL%
 {% endhighlight %}
 It produces
