@@ -229,7 +229,7 @@ So what did these tests show ...
 
 * The no exit code set tests (`onlyif check noexit` and `unless check noexit`) behaved exactly as the documentation stated; as if it returned exit code 0
 
-* The terminating error tests (`onlyif check term error` and `unless check term error`) behaved exactly as the documentation stated; Remebering that powershell returns exit code 1 for terminating errors
+* The terminating error tests (`onlyif check term error` and `unless check term error`) behaved exactly as the documentation stated; Remembering that powershell returns exit code 1 for terminating errors
 
 * The non-terminating error tests (`onlyif check non-term error` and `unless check non-term error`) are a bit strange.  They behaved as if Powershell had returned an exit code of 1, but our powershell tests in the previous section showed that non-terminating errors return zero
 
