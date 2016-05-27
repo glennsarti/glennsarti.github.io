@@ -24,33 +24,40 @@ The `Exit` command can be used to exit a powershell script and optionally return
 Unlike a lot scripting languages, Powershell has the concept of terminating and non-terminating errors ([More information](https://blogs.technet.microsoft.com/heyscriptingguy/2015/09/15/error-handling-two-types-of-errors/)).  A terminating error will stop the script whereas a non-terminating error will not.  This can cause some headaches for people that aren't expecting it!
 
 Take this very simple batch file;
-{% highlight powershell %}
+
+``` powershell
 @ECHO OFF
 powershell.exe "& { exit 255 }"
 ECHO Errorlevel %ERRORLEVEL%
-{% endhighlight %}
+```
+
 It produces
+
 ```
 Errorlevel 255
 ```
 This is what you would expect to happen.
 
 What about if I don't explicitly set an exit code?
-{% highlight powershell %}
+
+``` powershell
 @ECHO OFF
 powershell.exe "& { }"
 ECHO Errorlevel %ERRORLEVEL%
-{% endhighlight %}
+```
+
 ```
 Errorlevel 0
 ```
 
 So far so good.  So what happens if I raise an error (Division by Zero)?
-{% highlight powershell %}
+
+``` powershell
 @ECHO OFF
 powershell.exe "& { 1/0 }"
 ECHO Errorlevel %ERRORLEVEL%
-{% endhighlight %}
+```
+
 ```
 Attempted to divide by zero.
 At line:1 char:5
@@ -64,11 +71,13 @@ Errorlevel 0
 But the exit code is still zero?!?!?
 
 What about if the script syntax was broken, like a missing bracket?
-{% highlight powershell %}
+
+``` powershell
 @ECHO OFF
 powershell.exe "& { (missing-bracket }"
 ECHO Errorlevel %ERRORLEVEL%
-{% endhighlight %}
+```
+
 ```
 At line:1 char:21
 + & { (missing-bracket }
@@ -84,14 +93,15 @@ Now the exit code is no longer zero
 What would happen if I changed the error from Non-Terminating to Terminating?
 This behaviour is normally changed changing the `ErrorAction` parameter on Cmdlets or the global `$ErrorActionPreference` variable to `Stop`
 
-{% highlight powershell %}
+``` powershell
 @ECHO OFF
 powershell.exe "& { Get-Service -Name IDontExist }"
 ECHO Errorlevel %ERRORLEVEL%
 
 powershell.exe "& { Get-Service -Name IDontExist -ErrorAction Stop }"
 ECHO Errorlevel %ERRORLEVEL%
-{% endhighlight %}
+```
+
 ```
 Get-Service : Cannot find any service with service name 'IDontExist'.
 At line:1 char:5
@@ -117,20 +127,20 @@ So the non-terminating error (without the ErrorAction parameter) produced a zero
 
 If you depend on Powershell returning a meaningful exit code, you should use the exit command for all code branches.  This ensures Powershell returns the exit codes you expect.
 
-{% highlight powershell %}
+``` powershell
 # Don't do this
 If ($foo -eq 'bar') {
   exit 1
 }
-{% endhighlight %}
+```
 
-{% highlight powershell %}
+``` powershell
 # Do this instead
 If ($foo -eq 'bar') {
   exit 1
 }
 exit 0
-{% endhighlight %}
+```
 
 ---
 More information on [-ErrorAction](https://technet.microsoft.com/en-us/library/hh847884.aspx)
@@ -151,7 +161,7 @@ Whereas the unless attribute is defined as
 
 Using what we know about powershell exit codes a simple test manifest can be used to see what would happen for different scenarios;
 
-{% highlight puppet %}
+``` powershell
 # OnlyIf tests
 exec { 'onlyif check exit 0':
   command  => '"OnlyifExit0"',
@@ -213,8 +223,9 @@ exec { 'unless check term error':
   unless   => 'Get-Service -Name IDontExist -ErrorAction Stop',
   provider => powershell,
 }
-{% endhighlight %}
 ```
+
+``` powershell
 Notice: Compiled catalog for win-edson23cglf.localdomain in environment production in 0.17 seconds
 Notice: /Stage[main]/Main/Exec[onlyif check exit 0]/returns: executed successfully
 Notice: /Stage[main]/Main/Exec[onlyif check noexit]/returns: executed successfully
@@ -235,7 +246,7 @@ So what did these tests show ...
 
 So as one last test, what would happen if a non-terminating error was thrown but continued with other commands? Let's add `Write-Host "Hello"` to the end of the onlyif and unless and see what happens
 
-{% highlight puppet %}
+``` powershell
 # OnlyIf tests
 exec { 'onlyif check non-term error then command':
   command  => '"OnlyifNonTermThenCommand"',
@@ -249,7 +260,8 @@ exec { 'unless check non-term error then command':
   onlyif   => 'Get-Service -Name IDontExist; Write-Host "Hello"',
   provider => powershell,
 } ->
-{% endhighlight %}
+```
+
 ```
 Notice: Compiled catalog for win-edson23cglf.localdomain in environment production in 0.16 seconds
 Notice: /Stage[main]/Main/Exec[onlyif check non-term error then command]/returns: executed successfully
@@ -271,7 +283,7 @@ Example
 >  
 >  Starts the FOO service unless, it doesn't exist or it exists and is already running
 
-{% highlight puppet %}
+``` powershell
 # Don't do this
 
 # Start the FOO service unless already running or does not exist
@@ -281,11 +293,11 @@ exec { 'Start FOO':
              if ($foo.Status -eq "Running") { Exit 1 }',
   provider  => powershell,
 }
-{% endhighlight %}
+```
 
 In the example above, if the service doesn't exist it will throw a non-terminating error and then process the next command.  Remembering the previous weird test case, it will then execute the exec resource, attempting to start a service that does not exist.  However, this is not what we wanted.
 
-{% highlight puppet %}
+``` powershell
 # Do this instead
 
 # Start the FOO service unless already running or does not exist
@@ -295,6 +307,6 @@ exec { 'Start FOO':
              if ($foo.Status -eq "Running") { Exit 1 } else { Exit 0 }',
   provider  => powershell,
 }
-{% endhighlight %}
+```
 
 Now that there is an explicit `Exit 0`, the previous non-terminating error is ignored and the exec resource behaves as we wanted.
