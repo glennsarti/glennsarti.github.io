@@ -1,6 +1,6 @@
 ---
 permalink: "/about/"
-layout: single
+layout: archive
 author_profile: true
 read_time: true
 comments: true
