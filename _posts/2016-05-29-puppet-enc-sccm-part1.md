@@ -8,12 +8,13 @@ tags:
   - powershell
   - sccm
   - configuration manager
+modified: 2016-06-13
 ---
 
 System Center Configuration Manager (SCCM) is a common tool used by Windows administrators to manage their servers and desktops.  While Puppet does compete with SCCM in some areas, they can be used together.  Puppet can use other sources to assign classes to nodes using an [External Node Classifier](https://docs.puppet.com/guides/external_nodes.html)
 
 > An external node classifier is an arbitrary script or application which can tell Puppet which classes a node should have. It can replace or work in concert with the node definitions in the main site manifest (site.pp).
-> 
+>
 > Depending on the external data sources you use in your infrastructure, building an external node classifier can be a valuable way to extend Puppet.
 
 In this multipart series we'll create an ENC which uses SCCM for its information.
@@ -465,4 +466,6 @@ We then add a few systems to the Roles;
 
 ## What's next?
 
-In the next post we'll create a simple web service to query SCCM Database, and generate the required YAML for a Puppet ENC.
+In [Part 2]({{ site.url }}/blog/puppet-enc-sccm-part2), we'll create a simple web service to query SCCM Database, and generate the required YAML for a Puppet ENC.
+
+In Part 3, we'll configure Puppet to use our ENC web service and then try out some node classifications for real.
