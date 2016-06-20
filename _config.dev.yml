@@ -4,3 +4,9 @@ port                     : 4000
 
 sass:
   style:            :expanded
+
+# Analytics
+analytics:
+  provider               : false  # false (default), "google", "google-universal", "custom"
+  google:
+    tracking_id          :  
