@@ -4,6 +4,10 @@ excerpt: How does Desktop IT integrate with DevOps?
 read_time:
 category:
   - presentation
+header:
+  image: teaser-devops-desktops-oddsocks.png
+  overlay_image: header-perth-devops.png
+  teaser: teaser-devops-desktops-oddsocks.png
 tags:
   - devops
   - presentation

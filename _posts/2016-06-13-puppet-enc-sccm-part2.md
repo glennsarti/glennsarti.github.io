@@ -3,6 +3,9 @@ title: Using SCCM as a Puppet ENC - Part 2
 excerpt: Creating an ENC compatible Web Service and querying Microsoft System Center Configuration Manager
 category:
   - blog
+header:
+  overlay_image: header-default.png
+  teaser: teaser-puppet-sccm.png
 tags:
   - puppet
   - powershell

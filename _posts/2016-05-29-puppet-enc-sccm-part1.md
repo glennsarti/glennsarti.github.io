@@ -3,6 +3,9 @@ title: Using SCCM as a Puppet ENC - Part 1
 excerpt: Creating the Puppet Roles and Profiles schema in Microsoft System Center Configuration Manager
 category:
   - blog
+header:
+  overlay_image: header-default.png
+  teaser: teaser-puppet-sccm.png
 tags:
   - puppet
   - powershell
