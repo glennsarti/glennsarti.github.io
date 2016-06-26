@@ -1,6 +1,6 @@
 ---
 title: Querying Neo4j with Powershell - Metrics
-excerpt: Powershell function to querying Neo4j metrics via JMX
+excerpt: Powershell function to query Neo4j metrics via JMX
 category:
   - blog
 tags:
