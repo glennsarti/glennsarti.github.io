@@ -66,7 +66,7 @@ Before we start with the powershell function it's important to understand the st
 
 * The root of the API consists of a collection of Domains.  A domain is typically named after a Java namespace e.g. the Neo4j namespace is `org.neo4j` and so is the JMX domain.  Other examples of domain names are `java.util.logging` and `com.sun.management`.
 
-* A domain is composed of multiple Beans.  For our purposes, a bean is a logical grouping of metrics e.g. the `org.neo4j:instance=kernel#0,name=Kernel` holds metrics about the kernel in Neo4k
+* A domain is composed of multiple Beans.  For our purposes, a bean is a logical grouping of metrics e.g. the `org.neo4j:instance=kernel#0,name=Kernel` holds metrics about the kernel in Neo4j
 
 * A bean is composed of multiple metric keys and values.  This is where the metrics are stored e.g. the `KernelVersion` metric holds the value the Neo4j kernel version 
 
