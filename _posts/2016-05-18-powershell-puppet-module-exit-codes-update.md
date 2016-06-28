@@ -14,7 +14,7 @@ In a [previous](/blog/powershell-puppet-module-exit-codes/) post we looked tips 
 
 To give you some idea of the improvement I used the test manifest from [this](/blog/powershell-puppet-module-exit-codes/) post and timed how long it took to run.  Of course, I used Powershell to do it..
 
-{% highlight powershell %}
+``` powershell
 #### OLD MODULE
 Write-Host "*** OLD Module"
 $oldModuleTime = Measure-Command { & puppet apply powershell.pp --modulepath C:\blog\old-module }
@@ -38,7 +38,8 @@ $oldModuleTime = $oldModuleTime - $baselineTime
 $newModuleTime = $newModuleTime - $baselineTime
 Write-Host "*** Improvement"
 Write-Host ($oldModuleTime.TotalMilliseconds / $newModuleTime.TotalMilliseconds).ToString("###%")
-{% endhighlight %}
+```
+
 ```
 *** OLD Module
 Error: Write-error "Hello" returned 1 instead of one of [0]
