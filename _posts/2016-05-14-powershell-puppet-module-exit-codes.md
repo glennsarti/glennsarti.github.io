@@ -3,6 +3,10 @@ title: Tips for using the Puppet Powershell Module
 excerpt: Tips for using the Puppet Powershell Module and how exit codes and errors affect resources
 category:
   - blog
+header:
+  image: teaser-powershell.png
+  overlay_image: header-powershell.png
+  teaser: teaser-powershell.png
 tags:
   - puppet
   - powershell

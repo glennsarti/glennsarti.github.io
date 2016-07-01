@@ -3,6 +3,10 @@ title: Update - Tips for using the Puppet Powershell Module v2.0.0
 excerpt: Updated tips for using the Puppet Powershell Module, version 2.0.0
 category:
   - blog
+header:
+  image: teaser-powershell.png
+  overlay_image: header-powershell.png
+  teaser: teaser-powershell.png
 tags:
   - puppet
   - powershell
