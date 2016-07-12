@@ -4,13 +4,15 @@ excerpt: Creating an ENC compatible Web Service and querying Microsoft System Ce
 category:
   - blog
 header:
-  overlay_image: header-default.png
+  overlay_image: header-puppet-console-dark.png
   teaser: teaser-puppet-sccm.png
 tags:
   - puppet
   - powershell
   - sccm
+  - enc
   - configuration manager
+modified: 2016-07-12
 ---
 
 In [Part 1]({{ site.url }}/blog/puppet-enc-sccm-part1) of this series we created the required Roles, Profiles and Class as collections within SCCM.  In this next post, we'll create a web service which queries SCCM and then creates ENC compatible responses, which can then be consumed by Puppet.
@@ -476,4 +478,4 @@ environment: production
 
 ## What's next?
 
-In Part 3, we'll configure Puppet to use our ENC web service and then try out some node classifications for real.
+In [Part 3]({{ site.url }}/blog/puppet-enc-sccm-part3), we'll configure Puppet to use our ENC web service and then try out some node classifications for real.

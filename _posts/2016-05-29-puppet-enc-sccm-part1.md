@@ -4,14 +4,15 @@ excerpt: Creating the Puppet Roles and Profiles schema in Microsoft System Cente
 category:
   - blog
 header:
-  overlay_image: header-default.png
+  overlay_image: header-puppet-console-dark.png
   teaser: teaser-puppet-sccm.png
 tags:
   - puppet
   - powershell
   - sccm
+  - enc
   - configuration manager
-modified: 2016-06-13
+modified: 2016-07-12
 ---
 
 System Center Configuration Manager (SCCM) is a common tool used by Windows administrators to manage their servers and desktops.  While Puppet does compete with SCCM in some areas, they can be used together.  Puppet can use other sources to assign classes to nodes using an [External Node Classifier](https://docs.puppet.com/guides/external_nodes.html)
@@ -471,4 +472,4 @@ We then add a few systems to the Roles;
 
 In [Part 2]({{ site.url }}/blog/puppet-enc-sccm-part2), we'll create a simple web service to query SCCM Database, and generate the required YAML for a Puppet ENC.
 
-In Part 3, we'll configure Puppet to use our ENC web service and then try out some node classifications for real.
+In [Part 3]({{ site.url }}/blog/puppet-enc-sccm-part3), we'll configure Puppet to use our ENC web service and then try out some node classifications for real.
