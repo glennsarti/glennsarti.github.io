@@ -8,6 +8,8 @@ def write_file(filename,content)
   File.open(filename, "w:UTF-8") { |file| file.write(content) }
 end
 
+is_windows_batch = (ENV['OS'] == 'Windows_NT')
+
 # clean settings
 desc 'Clean'
 task :clean do
@@ -22,7 +24,7 @@ task :clean do
   end
 end
 
-basicSettings = '--trace --no-watch --safe'
+basicSettings = '--trace --safe'
 devConfig = '--config _config.yml,_config.dev.yml --drafts'
 
 namespace :build do
@@ -30,7 +32,7 @@ namespace :build do
   desc 'Build Jekyll with production settings'
   task :prod => [:clean] do
     puts 'Building Jekyll with PRODUCTION settings...'
-    system "JEKYLL_ENV=production jekyll build #{basicSettings}"
+    system "JEKYLL_ENV=production jekyll build #{basicSettings} --no-watch"
   end
 
   desc 'Build Jekyll with development settings'
@@ -48,7 +50,7 @@ namespace :build do
       end
     end
 
-    system "JEKYLL_ENV=development jekyll build #{basicSettings} #{devConfig}"
+    system "JEKYLL_ENV=development jekyll build #{basicSettings} #{devConfig} --no-watch"
     
     # Cache the main.css to speed up compilation
     if !File.exists?(maincss_file)
@@ -78,7 +80,12 @@ namespace :watch do
   desc 'Serve and watch Jekyll with development settings'
   task :dev => [:clean] do
     puts 'Building Jekyll with DEVELOPMENT settings...'
-    system "JEKYLL_ENV=development jekyll serve #{basicSettings} #{devConfig} --watch"
+    if is_windows_batch then
+      # Assumes cmd.exe not Powershell
+      system "SET JEKYLL_ENV=development && jekyll serve #{basicSettings} #{devConfig} --watch"
+    else
+      system "JEKYLL_ENV=development jekyll serve #{basicSettings} #{devConfig} --watch"
+    end
   end
 
 end
