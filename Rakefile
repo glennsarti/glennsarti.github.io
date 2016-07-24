@@ -8,7 +8,7 @@ def write_file(filename,content)
   File.open(filename, "w:UTF-8") { |file| file.write(content) }
 end
 
-is_windows_batch = (ENV['OS'] == 'Windows_NT')
+is_windows = (ENV['OS'] == 'Windows_NT')
 
 # clean settings
 desc 'Clean'
@@ -65,13 +65,23 @@ namespace :serve do
   desc 'Serve Jekyll with production settings'
   task :prod => [:clean] do
     puts 'Building Jekyll with PRODUCTION settings...'
-    system "JEKYLL_ENV=production jekyll serve #{basicSettings}"
+    if is_windows then
+      ENV['JEKYLL_ENV'] = "production"
+      system "jekyll serve #{basicSettings}"
+    else
+      system "JEKYLL_ENV=production jekyll serve #{basicSettings}"
+    end
   end
 
   desc 'Serve Jekyll with development settings'
   task :dev => [:clean] do
     puts 'Building Jekyll with DEVELOPMENT settings...'
-    system "JEKYLL_ENV=development jekyll serve #{basicSettings} #{devConfig}"
+    if is_windows then
+      ENV['JEKYLL_ENV'] = "development"
+      system "jekyll serve #{basicSettings} #{devConfig}"
+    else
+      system "JEKYLL_ENV=development jekyll serve #{basicSettings} #{devConfig}"
+    end
   end
 
 end
@@ -80,11 +90,11 @@ namespace :watch do
   desc 'Serve and watch Jekyll with development settings'
   task :dev => [:clean] do
     puts 'Building Jekyll with DEVELOPMENT settings...'
-    if is_windows_batch then
-      # Assumes cmd.exe not Powershell
-      system "SET JEKYLL_ENV=development && jekyll serve #{basicSettings} #{devConfig} --watch"
+    if is_windows then
+      ENV['JEKYLL_ENV'] = "development"
+      system "jekyll serve #{basicSettings} #{devConfig} --watch --incremental"
     else
-      system "JEKYLL_ENV=development jekyll serve #{basicSettings} #{devConfig} --watch"
+      system "JEKYLL_ENV=development jekyll serve --incremental #{basicSettings} #{devConfig} --watch"
     end
   end
 
