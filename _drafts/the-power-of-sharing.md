@@ -9,7 +9,7 @@ tags:
   - devops
   - culture
   - sharing
-  - cams 
+  - cams
 ---
 
 This blog post is the basis for a lightning/ignite presentation.
@@ -19,11 +19,11 @@ This blog post is the basis for a lightning/ignite presentation.
 # CAM + S ?
 **TODO Carebear image**
 
-Damon Edwards and John Willis coined the term [CAMS](http://itrevolution.com/devops-culture-part-1/) (Culture, Automation, Measurement and Sharing) back in 2010 at DevOpsDays Mountain View.  Since then, many people have written about Culture, and a vast number of tools have been created for Automation and Measurement.  However there is very little on the topic of Sharing. It’s obviously important otherwise it would be just CAM! Also it seems to be of equal importance otherwise it would be called CAMs.
+Damon Edwards and John Willis coined the term [CAMS](http://itrevolution.com/devops-culture-part-1/) (Culture, Automation, Measurement and Sharing) back in 2010 at DevOpsDays Mountain View.  Since then, many people have written about Culture, and a vast number of tools have been created for Automation and Measurement.  However there is very little on the topic of Sharing. It’s obviously important otherwise it would be just CAM! Looking further, it's not called CAMs either so Sharing must be of equal value and importance to CAM.
 
 **TODO** Segway into what does sharing mean
 
-# What does sharing mean?
+# What does Sharing mean?
 
 Culture, Automation and Measurement have a strong and obvious history...
 
@@ -33,7 +33,7 @@ Culture, Automation and Measurement have a strong and obvious history...
 
 * Measurement - Science has been teaching data gathering methods since the days of Gallileo (or even beyond!) and in more recent times Data Scientists are employed to help define, measure and analyse metrics.
 
-But sharing does not seem to have same history, or at least as prevelant.  Granted, sharing could be considered a part of Society and Culture in general, e.g. story telling, but what does sharing mean in the context of DevOps?
+But Sharing does not seem to have same history, or at least as prevelant.  Granted, sharing could be considered a part of Society and Culture in general, e.g. story telling, but what does sharing mean in the context of DevOps?
 
 [Patrick Debois](http://www.jedi.be/) gave a [talk](http://www.slideshare.net/jedi4ever/devops-with-the-s-for-sharing-14764362) at [JAX London in 2012](https://www.youtube.com/watch?v=j2EVXvqwKwY) entitled;
 
@@ -41,20 +41,21 @@ But sharing does not seem to have same history, or at least as prevelant.  Grant
 >
 > ... Many devops talks relate to the CAMS acronym : Culture, Automation, Measuring and Sharing. The S for Sharing is usually taken for granted and does not get much explanation, but in this talk it will be right in the centre. Without Sharing there is no Devops and successful adoption is impossible.
 
-Patrick gives a list of more than 50 facets that could and _should_ be shared in a company.  This presentation is fantastic and drives home exactly why Sharing is so important, and yet I was left wondering; This is great within a company or business "doing DevOps", but what about the wider DevOps Community? What about things such as blog posts and podcasts, where do they fit in? What about me as me as an individual, what's in it for me?
+Patrick gives a list of more than 50 facets that could and _should_ be shared in a company.  This presentation is fantastic and drives home exactly why Sharing is so important, and yet I was left wondering; This is great within a company/business practising DevOps, but what about the wider DevOps Community? What about things such as blog posts and podcasts, where do they fit in? What about me as me as an individual, what's in it for me?
 
-But this still didn't answer my original question of `What does sharing mean?`.  When all else fails, turn back to the dictionary;
+So, when all else fails when trying to define something, turn to the dictionary! Here are some defintions of Share from the Oxford Dictionary
 
-```
-Share [noun]
--  A part or portion of a larger amount that is divided among a number
-   of people, or to which a number of people contribute
+> Share [noun]
+>
+> -  A part or portion of a larger amount that is divided among a number of people, or to which a number of people contribute
+>
+> Share [verb] [with object]
+>
+> - Use, occupy, or enjoy (something) jointly with another or others
+>
+> - Possess (a view or quality) in common with others
 
-Share [verb] [with object]
-- Use, occupy, or enjoy (something) jointly with another or others
 
-- Possess (a view or quality) in common with others
-```
 
 
 
