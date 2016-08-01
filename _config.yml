@@ -144,6 +144,8 @@ exclude:
   - README
   - tmp
   - .ruby-version
+  - Resources.txt
+  - appveyor.yml
 keep_files:
   - .git
   - .svn
