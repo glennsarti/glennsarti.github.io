@@ -15,7 +15,7 @@ desc 'Clean'
 task :clean do
   puts 'Cleaning Jekyll'
   system 'jekyll clean'
-  
+
   if File.exists?(maincss_file)
     File.delete(maincss_file)
   end
@@ -25,7 +25,7 @@ task :clean do
 end
 
 basicSettings = '--trace --safe'
-devConfig = '--config _config.yml,_config.dev.yml --drafts'
+devConfig = '--config _config.yml,_config.dev.yml --unpublished --future'
 
 namespace :build do
 
@@ -38,9 +38,9 @@ namespace :build do
   desc 'Build Jekyll with development settings'
   task :dev do
     puts 'Building Jekyll with DEVELOPMENT settings...'
-    
+
     # Disable scss compilation if needed
-    if File.exists?(maincss_file) 
+    if File.exists?(maincss_file)
       if File.exists?(mainscss_file)
         File.delete(mainscss_file)
       end
@@ -51,10 +51,10 @@ namespace :build do
     end
 
     system "JEKYLL_ENV=development jekyll build #{basicSettings} #{devConfig} --no-watch"
-    
+
     # Cache the main.css to speed up compilation
     if !File.exists?(maincss_file)
-      FileUtils.cp(maincss_file_site,maincss_file) 
+      FileUtils.cp(maincss_file_site,maincss_file)
     end
   end
 
