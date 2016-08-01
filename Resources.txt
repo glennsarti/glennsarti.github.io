@@ -1,8 +1,17 @@
+------------
 Stock Photos
+------------
 
-CC2 License - Big images
+## CC2 License - Big images
 https://unsplash.com/
 
-Various Licenses
+## Various Licenses
 https://www.pexels.com/
 
+---------------
+Custom Includes
+---------------
+## Mermaid charting (https://knsv.github.io/mermaid/)
+
+Use in markdown
+{% include custom/mermaid.html %}
