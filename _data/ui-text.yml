@@ -27,6 +27,8 @@ en: &DEFAULT_EN
   email_label           : "Email"
   recent_posts          : "Recent Posts"
   undefined_wpm         : "Undefined parameter words_per_minute at _config.yml"
+  # Additional labels - Custom layouts
+  created_on_date_label : "Created:"
 en-US:
   <<: *DEFAULT_EN
 en-CA:
