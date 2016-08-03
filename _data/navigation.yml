@@ -4,7 +4,7 @@ main:
     url: "/about/"
 
   - title: "Blog"
-    url: "/years-archive"
-  
+    url: "/blog"
+
   - title: "Presentations"
     url: "/presentation"
