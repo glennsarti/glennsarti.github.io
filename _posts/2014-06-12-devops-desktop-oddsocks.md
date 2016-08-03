@@ -12,7 +12,8 @@ tags:
   - devops
   - presentation
   - windows
-  - desktop 
+  - desktop
+read_time: false
 ---
 
 The Desktop Support and Engineering teams in enterprises have been automating their application packaging and deployment infrastructure for nearly a decade and are very customer focused. What can Desktop IT and DevOps learn from each other and how can they contribute to each other’s success?

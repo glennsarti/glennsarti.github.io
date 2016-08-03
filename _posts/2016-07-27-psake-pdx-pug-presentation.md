@@ -13,6 +13,7 @@ tags:
   - presentation
   - powershell
   - pdx
+read_time: false
 ---
 
 ### 17 August 2016
