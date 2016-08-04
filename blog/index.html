@@ -1,0 +1,15 @@
+---
+layout: archive
+author_profile: true
+---
+
+<div>
+{% for post in site.categories.blog %}
+  {% assign currentdate = post.date | date: "%B %Y" %}
+  {% if currentdate != date %}
+    <h2 id="{{post.date | date: "%B%Y"}}" class="archive__subtitle">{{ currentdate }}</h2>
+    {% assign date = currentdate %}
+  {% endif %}
+  {% include custom/archive-single-blog.html %}
+{% endfor %}
+</div>
