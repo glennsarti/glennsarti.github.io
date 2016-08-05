@@ -69,9 +69,19 @@ But this still didn't help me.  This definition meant that I could only benefit 
 
 # Different types of Sharing...
 
-So perhaps instead of trying to define Sharing, I should look at the the different ways to Share
+So perhaps instead of trying to define Sharing, I should look at the the different ways to Share. To clarify, I'm not just talking about the "Share ....." in Facebook, Twitter, Instagram etc..  I'm also referring to blogs, podcasts, networking, [Meetups](https://www.meetup.com/);  pretty much any kind of social interaction.  After looking at many examples I narrowed it down to three categories:
+
+* Realtime sharing
+* Delayed sharing
+* Unicast sharing
+
+## Realtime Sharing
 
 
+## Delayed Sharing
+
+
+## Unicast Sharing
 
 ---
 The definition has two aspects, one about consuming a portion from a larger amount "I took my share" and the other about contributing a portion to increase the amount; "I gave my share".
