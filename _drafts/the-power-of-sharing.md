@@ -43,27 +43,63 @@ But Sharing does not seem to have same history, or at least as prevelant.  Grant
 
 Patrick gives a list of more than 50 facets that could and _should_ be shared in a company.  This presentation is fantastic and drives home exactly why Sharing is so important, and yet I was left wondering; This is great within a company/business practising DevOps, but what about the wider DevOps Community? What about things such as blog posts and podcasts, where do they fit in? What about me as me as an individual, what's in it for me?
 
-So, when all else fails when trying to define something, turn to the dictionary! Here are some defintions of Share from the Oxford Dictionary
+### Off to the dictionary ....
 
+So, when all else fails when trying to define something, turn to the dictionary! Here are some defintions of Share from the dictionary:
 > Share [noun]
 >
 > -  A part or portion of a larger amount that is divided among a number of people, or to which a number of people contribute
 >
 > Share [verb] [with object]
+> shared, sharing, shares
 >
 > - Use, occupy, or enjoy (something) jointly with another or others
 >
 > - Possess (a view or quality) in common with others
 
+_- Oxford Dictionary_
+{: .text-right}
+
+So we can distill this down to:
+
+> Sharing is to take something, such as your knowledge or experience, and distribute to a larger community, to it's benefit
+
+But this still didn't help me.  This definition meant that I could only benefit if someone _else_ shared.  What benefit was there for _me_ by sharing?  What was in it for me?
+
+
+# Different types of Sharing...
+
+So perhaps instead of trying to define Sharing, I should look at the the different ways to Share
 
 
 
+---
+The definition has two aspects, one about consuming a portion from a larger amount "I took my share" and the other about contributing a portion to increase the amount; "I gave my share".
+
+Besides the obvious comparison
+
+
+
+
+
+A share is a portion of the whole..
+
+
+Which means that if I'm in a DevOps community, then I am a portion of that community.
+
+  This also has an interesting inverse implication;
+
+_If I am a portion of the community, then if I leave, the community will be smaller/less because of me_
 
 
 
 
 
 # Sharing.  What's in it for me?
+
+
+
+Many years ago, my employer, [Bankwest](https://www.bankwest.com.au), facilitated 3 day workshops for all of the IT department, 600+ people at the time.  It was called Invigorated Thinking, and amongst many things, it used story telling in groups to
 
 
 
