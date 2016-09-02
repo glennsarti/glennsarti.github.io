@@ -25,7 +25,7 @@ task :clean do
 end
 
 basicSettings = '--trace --safe'
-devConfig = '--config _config.yml,_config.dev.yml --unpublished --future'
+devConfig = '--config _config.yml,_config.dev.yml --unpublished'
 
 namespace :build do
 
