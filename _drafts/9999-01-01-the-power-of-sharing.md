@@ -34,7 +34,7 @@ The land of DevOps-a-lot was first created by Daemon Edwards and John Willis whe
 Their most powerful weapon, the Care Bear Stare, is used to defeat the evil forces of Apathy, Blame, Mistrust and the most damning of all,Silos!
 
 
-## "... Without Share Bear there is DevOps-a-lot" - Patrick Debois (Heavily paraphrased!)
+## "... Without Share Bear there is no DevOps-a-lot" - Patrick Debois (Heavily paraphrased!)
 
 From the time Care-a-lot was first created to now, many people have written about Culture Bear, and a vast number of tools have been created to assist Automation Bear and Measurement Bear.  However, only the smallest sliver has been devoted to Share Bear. Many people just assume they know all there is to know about sharing.  Surely because we share every day so what is there to learn? Why should we care about Share Bear?
 
