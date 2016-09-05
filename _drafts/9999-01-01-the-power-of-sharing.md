@@ -16,14 +16,54 @@ This blog post is the basis for a lightning/ignite presentation.
 
 ---
 
-# CAM + S ?
-**TODO Carebear image**
+![Share Bear - Care Bears]({{ site.url }}/blog-images/sharing_blog-001.jpg){: .align-left }
+** TODO Care bare stare
 
-Damon Edwards and John Willis coined the term [CAMS](http://itrevolution.com/devops-culture-part-1/) (Culture, Automation, Measurement and Sharing) back in 2010 at DevOpsDays Mountain View.  Since then, many people have written about Culture, and a vast number of tools have been created for Automation and Measurement.  However there is very little on the topic of Sharing. It’s obviously important otherwise it would be just CAM! Looking further, it's not called CAMs either so Sharing must be of equal value and importance to CAM.
+## The Care Bear Stare of the bears of DevOps-a-lot
+
+The land of DevOps-a-lot was first created by Daemon Edwards and John Willis when they descended upon DevOpsDays Mountain View in 2010.  In this land are the magical four friends, The DevOps Care Bears!
+
+1. Culture Bear loves all the people in DevOps-a-lot and wants them to be happy and motivated.
+
+2. Automation Bear works hard to not only save time performing tasks in DevOps-a-lot but also helps to prevent mistakes, create consistency and enable self service.
+
+3. Measurement Bear (Metrics for short) seeks to measure the things that are important to help the people of DevOps-a-lot make informed and transparent decisions.
+
+4. Share Bear helps the people of DevOps-a-lot share similar experiences however and learn from each other.
+
+Their most powerful weapon, the Care Bear Stare, is used to defeat the evil forces of Apathy, Blame, Mistrust and the most damning of all,Silos!
+
+
+## "... Without Share Bear there is DevOps-a-lot" - Patrick Debois (Heavily paraphrased!)
+
+From the time Care-a-lot was first created to now, many people have written about Culture Bear, and a vast number of tools have been created to assist Automation Bear and Measurement Bear.  However, only the smallest sliver has been devoted to Share Bear. Many people just assume they know all there is to know about sharing.  Surely because we share every day so what is there to learn? Why should we care about Share Bear?
+
+[Patrick Debois](http://www.jedi.be/) the Grand Wizard of DevOps-a-lot, gave a [talk](http://www.slideshare.net/jedi4ever/devops-with-the-s-for-sharing-14764362) at [JAX London in 2012](https://www.youtube.com/watch?v=j2EVXvqwKwY) with the title:
+
+> Devops with the S for Sharing
+>
+> ... Many devops talks relate to the CAMS acronym : Culture, Automation, Measuring and Sharing. The S for Sharing is usually taken for granted and does not get much explanation, but in this talk it will be right in the centre. Without Sharing there is no Devops and successful adoption is impossible.
+
+Patrick gives a list of more than 50 facets that could and _should_ be shared by a company in DevOps-a-lot.  This presentation is fantastic and drives home exactly why sharing and Share Bear is so important, and yet I was left wondering; This is great for a company, but what about the broader community in DevOps-a-lot? What about things such as blog posts and podcasts, where do they fit in? What about me as me as an individual?
+
+
+## Professor Coldheart and Selfish Bear
+
+TODO Do I go the Share Bear origin story or selfish bear route.
+TODO Thinking it's best to go the selfish bear route and show how it helps you too.
+
+
+## References
+
+Damon Edwards and John Willis coined the term [CAMS](http://itrevolution.com/devops-culture-part-1/) (Culture, Automation, Measurement and Sharing) at DevOpsDays Mountain View in 2010.
+
+
+-----
 
 **TODO** Segway into what does sharing mean
+But I share all the time, it's easy.  
 
-# What does Sharing mean?
+# "... Without Sharing there is no Devops and successful adoption is impossible." - Patrick Debois
 
 Culture, Automation and Measurement have a strong and obvious history...
 
@@ -34,6 +74,7 @@ Culture, Automation and Measurement have a strong and obvious history...
 * Measurement - Science has been teaching data gathering methods since the days of Gallileo (or even beyond!) and in more recent times Data Scientists are employed to help define, measure and analyse metrics.
 
 But Sharing does not seem to have same history, or at least as prevelant.  Granted, sharing could be considered a part of Society and Culture in general, e.g. story telling, but what does sharing mean in the context of DevOps?
+
 
 [Patrick Debois](http://www.jedi.be/) gave a [talk](http://www.slideshare.net/jedi4ever/devops-with-the-s-for-sharing-14764362) at [JAX London in 2012](https://www.youtube.com/watch?v=j2EVXvqwKwY) entitled;
 
