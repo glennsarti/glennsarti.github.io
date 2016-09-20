@@ -21,36 +21,47 @@ This blog post is the basis for a lightning/ignite presentation.
 
 ## The Care Bear Stare of the bears of DevOps-a-lot
 
-The land of DevOps-a-lot was first created by Daemon Edwards and John Willis when they descended upon DevOpsDays Mountain View in 2010.  In this land are the magical four friends, The DevOps Care Bears!
+The land of DevOps-a-lot was first created by Daemon Edwards and John Willis when they descended upon DevOpsDays Mountain View, in 2010.  This land was fantastical place, filled with productivity, deployments and happiness. And in it were four magical friends, The DevOps Care Bears!
 
 1. Culture Bear loves all the people in DevOps-a-lot and wants them to be happy and motivated.
 
 2. Automation Bear works hard to not only save time performing tasks in DevOps-a-lot but also helps to prevent mistakes, create consistency and enable self service.
 
-3. Measurement Bear (Metrics for short) seeks to measure the things that are important to help the people of DevOps-a-lot make informed and transparent decisions.
+3. Measurement Bear (Metrics for short) seeks to measure the things that are important, and help the people of DevOps-a-lot make informed and transparent decisions.
 
-4. Share Bear helps the people of DevOps-a-lot share similar experiences however and learn from each other.
+4. Share Bear helps the people of DevOps-a-lot share similar experiences and learn from one another.
 
-Their most powerful weapon, the Care Bear Stare, is used to defeat the evil forces of Apathy, Blame, Mistrust and the most damning of all,Silos!
+Together, they forged the Care Bear Stare.  A powerful weapon, used to defeat the evil forces of Apathy, Blame, Mistrust and the most damning of all, Silos!
 
+## "... Without Share Bear there is no DevOps-a-lot" - Patrick Debois - heavily paraphrased
 
-## "... Without Share Bear there is no DevOps-a-lot" - Patrick Debois (Heavily paraphrased!)
+From the time Care-a-lot was first created to present, many people have written about Culture Bear, and a vast number of tools have been created to assist Automation Bear and Measurement Bear.  However, only the smallest sliver has been devoted to Share Bear. Many people just assume they know all there is to know about sharing.  Surely because we share every day so what is there to learn?  Share Bear felt sad for it seemed like people had forgotten about it.  After all, it takes all four bears for a Care Bear Stare!
 
-From the time Care-a-lot was first created to now, many people have written about Culture Bear, and a vast number of tools have been created to assist Automation Bear and Measurement Bear.  However, only the smallest sliver has been devoted to Share Bear. Many people just assume they know all there is to know about sharing.  Surely because we share every day so what is there to learn? Why should we care about Share Bear?
-
-[Patrick Debois](http://www.jedi.be/) the Grand Wizard of DevOps-a-lot, gave a [talk](http://www.slideshare.net/jedi4ever/devops-with-the-s-for-sharing-14764362) at [JAX London in 2012](https://www.youtube.com/watch?v=j2EVXvqwKwY) with the title:
+[Patrick Debois](http://www.jedi.be/) the Grand Wizard of DevOps-a-lot, told a [wonderful story](http://www.slideshare.net/jedi4ever/devops-with-the-s-for-sharing-14764362) at [JAX London in 2012](https://www.youtube.com/watch?v=j2EVXvqwKwY) called "Devops with the S for Sharing"
 
 > Devops with the S for Sharing
 >
 > ... Many devops talks relate to the CAMS acronym : Culture, Automation, Measuring and Sharing. The S for Sharing is usually taken for granted and does not get much explanation, but in this talk it will be right in the centre. Without Sharing there is no Devops and successful adoption is impossible.
 
-Patrick gives a list of more than 50 facets that could and _should_ be shared by a company in DevOps-a-lot.  This presentation is fantastic and drives home exactly why sharing and Share Bear is so important, and yet I was left wondering; This is great for a company, but what about the broader community in DevOps-a-lot? What about things such as blog posts and podcasts, where do they fit in? What about me as me as an individual?
+The Grand Wizard laid out over 50 different ways that people can shared by a company/startup/business/enterprise.  But Share Bear saw a hole; What about the people? How do they share at a personal level? Why should they?
+
+So Share Bear sat down, thought hard, and here is what they found:
+
+## Personal sharing
+
+### Personal Sharing - Sharing with no-one
+
+This is the most strangest of sharing techniques.  How can you share with no-one but yourself? Does this mean you turn into Selfish Bear and not share anything? No, instead you share your thoughts with something that cannot respond.
+
+Rubber ducking is common term used by software developers whereby they explain problems, or solutions, or just think out loud to a rubber duck (or some other inanimate object).  It's attributed to the book [The Pragmatic Programmer](https://pragprog.com/book/tpp/the-pragmatic-programmer) however I suspect it's long been known before then.  The very act of explaining something to an object, not a person, means we can explore different points of view, without interruption or the fear of the other person's reaction.
+
+But this is not limited to software development.
+
+https://www.psychologytoday.com/blog/the-web-violence/201309/resilience-and-4-benefits-sharing-your-story
+http://www.lifepathsresearch.org/wp-content/uploads/Laws-of-Life-Toolkit-Hamby-et-al-2015-2.pdf
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=8&cad=rja&uact=8&ved=0ahUKEwi078ewjZ3PAhVHGD4KHdHMAU0QFghIMAc&url=http%3A%2F%2Fwww.openscienceonline.com%2Fauthor%2Fdownload%3FpaperId%3D1679%26stateId%3D8000%26fileType%3D3&usg=AFQjCNFqBpejyFvcAzOsh20uCR--a94fwQ&sig2=e2YijWnTDgnNvMrTPjf0Hg&bvm=bv.133178914,d.amc
 
 
-## Professor Coldheart and Selfish Bear
-
-TODO Do I go the Share Bear origin story or selfish bear route.
-TODO Thinking it's best to go the selfish bear route and show how it helps you too.
 
 
 ## References
@@ -203,6 +214,7 @@ What about the rubber duck theory (if you can’t explain your idea to a rubber 
 
 
 https://www.psychologytoday.com/blog/the-web-violence/201309/resilience-and-4-benefits-sharing-your-story
+http://www.lifepathsresearch.org/wp-content/uploads/Laws-of-Life-Toolkit-Hamby-et-al-2015-2.pdf
 
 http://devopsdictionary.com/wiki/CAMS
 http://itrevolution.com/devops-culture-part-1/
