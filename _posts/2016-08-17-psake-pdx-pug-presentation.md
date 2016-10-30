@@ -22,4 +22,6 @@ read_time: false
 
 In this talk, Glenn will talk to us about PSake which is a build automation tool in PowerShell, inspired by Rake and Bake. Glenn will show how he converted from batch scripts to Psake for an open source packaging project he maintains. This will also include a small self paced workshop to create a PSake build script.
 
+[Meetup Event](http://www.meetup.com/PDX-PowerShell-User-Group/events/232600264/)
+
 [Presentation](https://speakerdeck.com/glennsarti/psake-good-for-more-than-just-sushi)
