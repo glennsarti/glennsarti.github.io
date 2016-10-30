@@ -45,17 +45,19 @@ From the time Care-a-lot was first created to present, many people have written 
 
 The Grand Wizard laid out over 50 different ways that people can shared by a company/startup/business/enterprise.  But Share Bear saw a hole; What about the people? How do they share at a personal level? Why should they?
 
-So Share Bear sat down, thought hard, and here is what they found:
+So Share Bear sat down, thought hard and wrote to the people of DevOps-a-lot:
 
-## Personal sharing
+---
+### Sharing with no-one
 
-### Personal Sharing - Sharing with no-one
-
-This is the most strangest of sharing techniques.  How can you share with no-one but yourself? Does this mean you turn into Selfish Bear and not share anything? No, instead you share your thoughts with something that cannot respond.
+This is the most strangest of sharing techniques.  How can you share with no-one? Surely there must be two people in order to share? or does this mean you turn into Selfish Bear and not share anything? No, instead you share your thoughts with something that cannot respond.
 
 Rubber ducking is common term used by software developers whereby they explain problems, or solutions, or just think out loud to a rubber duck (or some other inanimate object).  It's attributed to the book [The Pragmatic Programmer](https://pragprog.com/book/tpp/the-pragmatic-programmer) however I suspect it's long been known before then.  The very act of explaining something to an object, not a person, means we can explore different points of view, without interruption or the fear of the other person's reaction.
 
 But this is not limited to software development.
+
+
+### Sharing your story can be good for your mental and emotional health
 
 https://www.psychologytoday.com/blog/the-web-violence/201309/resilience-and-4-benefits-sharing-your-story
 http://www.lifepathsresearch.org/wp-content/uploads/Laws-of-Life-Toolkit-Hamby-et-al-2015-2.pdf
