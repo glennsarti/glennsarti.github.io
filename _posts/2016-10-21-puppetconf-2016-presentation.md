@@ -23,6 +23,6 @@ Writing your first Puppet module is pretty daunting. There are so many things to
 
 [Presentation](https://speakerdeck.com/glennsarti/how-not-to-freak-out-when-you-start-writing-puppet-modules-for-windows)
 
-Recording - Coming Soon!
+[Recording](https://www.youtube.com/watch?v=9A2-_nPrqfs)
 
 Github Repo with demo code - Coming Soon!
