@@ -12,6 +12,7 @@ tags:
   - puppetconf
   - speaking
   - presentation
+modified: 2016-11-22
 ---
 
 # Overwhelming!
@@ -25,9 +26,9 @@ With so much that went on, I thought I would blog some things I learnt while pre
 
 I am a natural procrastinator and this was a hard hurdle to overcome.  Unless I had given the talk before (Nope, this was the first time) or I felt super comfortable talking off script (Definitely NOT!) I needed to have a plan of attack.  As my talk was in October I set the following deadlines:
 
-* October - Practice the talk and only do minor tweaks.  This month was basically a write-off
+* October - Practice the talk and only do minor tweaks.  This month was basically a write-off due so there's no time to make sweeping changes.
 
-* September - Complete and then deliver the presentation, at least twice,f to a group of peers.  Use meeting requests to book out people's calendar
+* September - Complete and then deliver the presentation, at least twice, to a group of peers.  Use meeting requests to book out people's calendar
 
 * August - Write the presentation.  Add placeholders for demos if not complete, just get something written I could talk to
 
