@@ -225,3 +225,17 @@ http://itrevolution.com/devops-culture-part-1/
 Abstract:
 
 Damon Edwards and John Willis coined the term CAMS (Culture, Automation, Measurement and Sharing) back in 2010 at DevOpsDays Mountain View.  Since then, many people have written about Culture, and a vast number of tools have been created for Automation and Measurement.  However there is very little on the topic of Sharing. It’s obviously important otherwise it would be just CAM! Why is sharing powerful? and how powerful can it be? In this ignite presentation we will look at why sharing is powerful and how it affected me; from the beginning of my DevOps journey through to moving with my family from Australia to Portland.
+
+
+Abstract #2:
+
+Sharing : What's in it for me!?
+
+"... Without Sharing there is no Devops and successful adoption is impossible." - Patrick Debois
+
+Sharing. It's one of the four pillars of CAMS. We consume so much shared content but have we ever thought about sharing from the point of view of the Sharer? Why should I share? If I'm constantly sharing information what do I get out of it? What's in it for me!?
+This ignite talk looks at sharing through the eyes of a Sharer. What benefits do they receive out of sharing? What cultural or psychological benefits are there?
+
+Additional Information
+
+This talk was inspired by an article on emotional resilience and story telling (https://www.psychologytoday.com/blog/the-web-violence/201309/resilience-and-4-benefits-sharing-your-story) And then digging into the psychology papers authored and freely available e.g. http://www.lifepathsresearch.org/wp-content/uploads/Laws-of-Life-Toolkit-Hamby-et-al-2015-2.pdf. I then applied these learnings through the lens of DevOps and sharing common experiences e.g. Open Spaces at DevOpsDays.
