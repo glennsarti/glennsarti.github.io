@@ -1,23 +1,24 @@
 version: 1.0.{build}
+
+branches:
+  only:
+    - master
+
 build_script:
 - cmd: >-
-    ECHO Setting Ruby 2.2 as default
+    ECHO Setting Ruby 2.3 as default
 
-    SET PATH=C:\Ruby22-x64\bin;%PATH%
-
+    SET PATH=C:\Ruby23-x64\bin;%PATH%
 
     ECHO Getting ruby version...
 
     ruby -v
 
-
     bundle install --path .bundle\gems
-
 
     ECHO Contents of Gemfile.lock
 
     type Gemfile.Lock
-
 
     bundle exec rake clean build:prod
 test: off
