@@ -4,10 +4,10 @@ excerpt: Using Powershell to query Neo4j using Bolt and native .Net Framework Gr
 category:
   - blog
 header:
-  image: header-neo4j-globe.png
-  overlay_image: header-neo4j-globe.png
+  image: /images/header-neo4j-globe.png
+  overlay_image: /images/header-neo4j-globe.png
   overlay_filter: 0.5
-  teaser: teaser-ps-and-neo.png
+  teaser: /images/teaser-ps-and-neo.png
 tags:
   - neo4j
   - powershell

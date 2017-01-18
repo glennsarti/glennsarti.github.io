@@ -4,10 +4,10 @@ excerpt: Using docker-compose to create a three node Neo4j Enterprise cluster on
 category:
   - blog
 header:
-  image: header-neo4j-globe.png
-  overlay_image: header-neo4j-globe.png
+  image: /images/header-neo4j-globe.png
+  overlay_image: /images/header-neo4j-globe.png
   overlay_filter: 0.5
-  teaser: teaser-neo-win-docker.png
+  teaser: /images/teaser-neo-win-docker.png
 tags:
   - neo4j
   - powershell

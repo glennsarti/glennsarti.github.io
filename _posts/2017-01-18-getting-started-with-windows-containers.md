@@ -4,9 +4,9 @@ excerpt: How to get started with Windows Containers, Images and Docker
 category:
   - blog
 header:
-  overlay_image: header-docker.png
+  overlay_image: /images/header-docker.png
   overlay_filter: 0.75
-  teaser: teaser-docker.png
+  teaser: /images/teaser-docker.png
 tags:
   - windows
   - containers

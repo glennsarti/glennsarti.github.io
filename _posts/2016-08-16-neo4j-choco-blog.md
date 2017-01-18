@@ -4,10 +4,10 @@ excerpt: Community blog post on neo4j.com - Using Chocolatey to Install Neo4j on
 category:
   - blog
 header:
-  image: header-neo4j-globe.png
-  overlay_image: header-neo4j-globe.png
+  image: /images/header-neo4j-globe.png
+  overlay_image: /images/header-neo4j-globe.png
   overlay_filter: 0.5
-  teaser: teaser-neo4j-choco.png
+  teaser: /images/teaser-neo4j-choco.png
 tags:
   - neo4j
   - chocolatey

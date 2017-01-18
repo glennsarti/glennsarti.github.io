@@ -4,8 +4,8 @@ excerpt: Creating an ENC compatible Web Service and querying Microsoft System Ce
 category:
   - blog
 header:
-  overlay_image: header-puppet-console-dark.png
-  teaser: teaser-puppet-sccm.png
+  overlay_image: /images/header-puppet-console-dark.png
+  teaser: /images/teaser-puppet-sccm.png
 tags:
   - puppet
   - powershell

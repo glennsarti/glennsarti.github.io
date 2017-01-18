@@ -4,9 +4,9 @@ excerpt: Updated tips for using the Puppet Powershell Module, version 2.0.0
 category:
   - blog
 header:
-  image: teaser-powershell.png
-  overlay_image: header-powershell.png
-  teaser: teaser-powershell.png
+  image: /images/teaser-powershell.png
+  overlay_image: /images/header-powershell.png
+  teaser: /images/teaser-powershell.png
 tags:
   - puppet
   - powershell
