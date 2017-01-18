@@ -349,7 +349,9 @@ PS> New-ContainerNetwork –name nat2 –Mode NAT –SubnetPrefix 172.17.0.0/16 
 PS> Get-Netnat | Remove-NetNAT
 ```
 For each NAT network you want to configure
-* Create a new NAT container network 
+
+* Create a new NAT container network
+
 * Remove the created WinNAT allocation.  We override that later with our larger prefix
 
 ``` powershell
