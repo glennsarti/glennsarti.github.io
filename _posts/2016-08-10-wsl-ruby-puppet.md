@@ -4,10 +4,10 @@ excerpt: Quickly setting up WSL for ruby development
 category:
   - blog
 header:
-  image: header-wsl.png
-  overlay_image: header-wsl.png
+  image: /images/header-wsl.png
+  overlay_image: /images/header-wsl.png
   overlay_filter: 0.5
-  teaser: teaser-wsl-and-ruby.png
+  teaser: /images/teaser-wsl-and-ruby.png
 tags:
   - ubuntu
   - ruby

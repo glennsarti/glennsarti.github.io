@@ -4,8 +4,8 @@ excerpt: Configuring Puppet to use an ENC compatible Web Service
 category:
   - blog
 header:
-  overlay_image: header-puppet-console-dark.png
-  teaser: teaser-puppet-sccm.png
+  overlay_image: /images/header-puppet-console-dark.png
+  teaser: /images/teaser-puppet-sccm.png
 tags:
   - puppet
   - enc

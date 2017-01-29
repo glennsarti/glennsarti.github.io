@@ -4,9 +4,9 @@ excerpt: Tips for using the Puppet Powershell Module and how exit codes and erro
 category:
   - blog
 header:
-  image: teaser-powershell.png
-  overlay_image: header-powershell.png
-  teaser: teaser-powershell.png
+  image: /images/teaser-powershell.png
+  overlay_image: /images/header-powershell.png
+  teaser: /images/teaser-powershell.png
 tags:
   - puppet
   - powershell

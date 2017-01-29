@@ -5,9 +5,9 @@ read_time:
 category:
   - presentation
 header:
-  overlay_image: header-puppetconf-2016.png
+  overlay_image: /images/header-puppetconf-2016.png
   overlay_filter: 0.5
-  teaser: teaser-puppetconf-2016.png
+  teaser: /images/teaser-puppetconf-2016.png
 tags:
   - puppetconf
   - presentation

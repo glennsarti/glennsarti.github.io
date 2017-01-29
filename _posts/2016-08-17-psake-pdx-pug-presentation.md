@@ -5,9 +5,9 @@ read_time:
 category:
   - presentation
 header:
-  overlay_image: header-default.png
+  overlay_image: /images/header-default.png
   overlay_filter: 0.5
-  teaser: teaser-psake-pdx-pug.png
+  teaser: /images/teaser-psake-pdx-pug.png
 tags:
   - psake
   - presentation

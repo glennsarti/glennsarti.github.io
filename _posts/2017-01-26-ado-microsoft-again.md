@@ -5,9 +5,9 @@ read_time:
 category:
   - presentation
 header:
-  overlay_image: header-default.png
+  overlay_image: /images/header-default.png
   overlay_filter: 0.5
-  teaser: teaser-ado-microsoft-again.png
+  teaser: /images/teaser-ado-microsoft-again.png
 tags:
   - psake
   - presentation

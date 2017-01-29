@@ -4,9 +4,9 @@ excerpt: Things I learnt as a first time speaker at PuppetConf 2016
 category:
   - blog
 header:
-  overlay_image: header-puppetconf-2016.png
+  overlay_image: /images/header-puppetconf-2016.png
   overlay_filter: 0.5
-  teaser: teaser-speaker-puppetconf-2016.png
+  teaser: /images/teaser-speaker-puppetconf-2016.png
 tags:
   - puppet
   - puppetconf
