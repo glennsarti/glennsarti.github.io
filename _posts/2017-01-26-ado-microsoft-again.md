@@ -9,10 +9,10 @@ header:
   overlay_filter: 0.5
   teaser: /images/teaser-ado-microsoft-again.png
 tags:
-  - psake
+  - ado
   - presentation
-  - powershell
-  - stl
+  - podcast
+  - devops
 read_time: false
 ---
 
