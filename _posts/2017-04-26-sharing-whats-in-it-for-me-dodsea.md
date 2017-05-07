@@ -13,7 +13,7 @@ tags:
   - seattle
   - sharing
 read_time: false
-modified: 2017-04-26
+modified: 2017-05-06
 ---
 
 ### [Sharing: What's in it for me!?](https://www.devopsdays.org/events/2017-seattle/program/glenn-sarti/)
@@ -26,7 +26,7 @@ This ignite talk looks at sharing through the eyes of a Sharer. What benefits do
 
 [Presentation](https://speakerdeck.com/glennsarti/sharing-whats-in-it-for-me)
 
-Recording - Coming Soon!
+[Recording](https://confreaks.tv/videos/devopsdaysseattle2017-sharing-what-s-in-it-for-me)
 
 ### Transcript
 
