@@ -36,7 +36,7 @@ There are some [core facts](https://docs.puppet.com/facter/latest/core_facts.htm
 
 Most people when starting out will write PowerShell (or heaven forbid, batch files) external facts which is a good start.  However there are some downsides.  Firstly the execution time PowerShell scripts can be a little slow.  This is mainly due to PowerShell itself starting.  The other downside is you can not tell Unix based operating systems to not try an execute these Windows specific external facts.  While there are some tricks to help stop this, it's far too easy for Windows scripts to log warnings and errors making it harder to figure out when real issues occur.
 
-But the apparent learning curve to writing these script looks pretty steep; and rightly so, if all you want to do is read a registry key and output the result, why should a Windows administrator have to learn ruby?  Well this blog post is to help reduce the time it takes to write custom facts.  Also, if you squint, the ruby language looks a lot like (and in some cases operates similarly to) PowerShell.
+But the apparent learning curve to writing ruby looks steep; if all you want to do is read a registry key and output the result, why should a Windows administrator have to learn ruby?  Well, this blog post is to help reduce the effort it takes to write custom facts.  Also, if you squint, the ruby language looks a lot like (and in some cases operates similarly to) PowerShell.
 
 The source code for these examples is available on my [blog github repo](https://github.com/glennsarti/code-glennsarti.github.io/tree/master/customfacts).
 
@@ -85,7 +85,7 @@ Facter.add('windows_edition_custom') do
 end
 ```
 
-This creates a custom fact called `windows_edition_custom` which just outputs a value of test value.  Running facter on my laptop we see:
+This creates a custom fact called `windows_edition_custom` which has a value of `testvalue`.  Running facter on my laptop we see:
 
 ``` powershell
 > puppet facts
@@ -126,7 +126,7 @@ The confine statement instructs facter to only attempt resolution of this fact o
     'testvalue'
 ```
 
-As this is just a demonstration, this static string value is output.  This is the code we'll change next to output the real value.
+As this is just a demonstration, we are using a static string.  This is the code we'll change to output what the real value.
 
 ### Reading the registry in Puppet and ruby
 
@@ -151,11 +151,11 @@ So we've added five lines of code to read the registry.  Let's break these down 
     value = nil
 ```
 
-First we set value of the fact to nil.  We need to initialise the variable here otherwise, when we set it later inside the codeblock, it's value will be lost due to [variable scoping](https://blog.codeship.com/a-deep-dive-into-ruby-scopes/)
+First we set value of the fact to nil.  We need to initialise the variable here otherwise, when we set it later inside the codeblock, its value will be lost due to [variable scoping](https://blog.codeship.com/a-deep-dive-into-ruby-scopes/)
 
 Next we open the registry key `SOFTWARE\Microsoft\Windows NT\CurrentVersion`.  Not that unlike the batch file, it doesn't have the `HKLM` at the beginning.  This is because we're using the `HKEY_LOCAL_MACHINE` class, so adding that to the name is redundant.  By default the registry key is opened as Read Only and for 64bit access.
 
-Next, once we have an open registry key, we set the registry value as a hash, thus `regkey[EditionID']`.
+Next, once we have an open registry key, we get the registry value as a key in the `regkey` object, thus `regkey[EditionID']`.
 
 Lastly we output the value for facter.  Ruby uses the output from the last line so we don't need an explicit `return` statement like you would in langauges like C#.
 
@@ -170,11 +170,11 @@ Now when we run the fact we get:
 ...
 ```
 
-Tada, we've now convert a batch file based external registry fact to a custom ruby fact in 10 lines.  But there's still a but of cleaning up to do.
+Tada!, we've now convert a batch file based external registry fact, to a custom ruby fact in 10 lines.  But there's still a bit of cleaning up to do.
 
 ### Final touches
 
-If the registy key or value is not available, facter raises a warning, for example, if I change `value = regkey['EditionID']` to `value = regkey['EditionID_doesnotexist']` I see these errors output:
+If the registy key or value does not exist, facter raises a warning, for example, if I change `value = regkey['EditionID']` to `value = regkey['EditionID_doesnotexist']` I see these errors output:
 
 ``` powershell
 > puppet facts
@@ -204,13 +204,13 @@ Facter.add('windows_edition_custom') do
 end
 ```
 
-Much like the try-catch in PowerShell begin-rescue will catch the error and just output `nil` for the fact value if an error occurs.
+Much like the try-catch in PowerShell or C#, begin-rescue will catch the error and just output `nil` for the fact value if an error occurs.
 
 ## Writing a WMI based custom fact
 
 ### The external fact
 
-For this example we'll convert a powershell file based external fact to a ruby external fact.  This fact reads the `ChassisTypes` property of the [Win32_SystemEnclosure](https://msdn.microsoft.com/en-us/library/aa394474(v=vs.85).aspx) WMI Class.  This describes the type of physical enclosure for the computer, for example a Mini Tower, or in my case a Portable device.
+For this example we'll convert a powershell file based external fact, to a ruby external fact.  This fact reads the `ChassisTypes` property of the [Win32_SystemEnclosure](https://msdn.microsoft.com/en-us/library/aa394474(v=vs.85).aspx) WMI Class.  This describes the type of physical enclosure for the computer, for example a Mini Tower, or in my case, a Portable device.
 
 ``` powershell
 $enclosure = Get-WMIObject -Class Win32_SystemEnclosure | Select-Object -First 1
@@ -277,7 +277,7 @@ So again, let's break this down:
       require 'win32ole'
 ```
 
-Much like in PowerShell or C# we need to import modules (or gems for ruby) into our code.  We do this with the `require` statement.  This enables us to use the WIN32OLE object on later lines.
+Much like in PowerShell or C#, we need to import modules (or gems for ruby) into our code.  We do this with the `require` statement.  This enables us to use the WIN32OLE object on later lines.
 
 ``` ruby
       wmi = WIN32OLE.connect("winmgmts:\\\\.\\root\\cimv2")
@@ -310,11 +310,11 @@ This gives the following output:
 ...
 ```
 
-Huh.  So the output is slightly different.  In external facts all output is considered a string.  However as we are now using WMI and custom ruby facts, these properly understand data types.  Looking at the [MSDN](https://msdn.microsoft.com/en-us/library/aa394474(v=vs.85).aspx) documentation `ChassisTypes` is indeed an array type.
+Huh.  So the output is slightly different.  In external facts all output is considered a string.  However as we are now using WMI and custom ruby facts, we can properly understand data types.  Looking at the [MSDN](https://msdn.microsoft.com/en-us/library/aa394474(v=vs.85).aspx) documentation `ChassisTypes` is indeed an array type.
 
-If this was ok for our example, we could leave the code as is.
+If this was ok for any dependant puppet code, we could leave the code as is.
 
-If you wanted just the first element we could use:
+However if you wanted just the first element we could use:
 
 ``` ruby
       enclosure.ChassisTypes.first
