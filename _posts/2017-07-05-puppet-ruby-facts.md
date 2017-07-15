@@ -14,6 +14,7 @@ tags:
   - puppet
   - facter
   - powershell
+modified: 2017-07-14
 ---
 
 {% include toc icon="tags" %}
@@ -22,7 +23,7 @@ tags:
 
 Puppet uses a tool called [Facter](https://docs.puppet.com/facter/latest/index.html) to gather system information during a Puppet run.
 
-> Facter is Puppet’s cross-platform system profiling library. It discovers and reports per-node facts, which are available in your Puppet manifests as variables.
+> Facter is Puppet's cross-platform system profiling library. It discovers and reports per-node facts, which are available in your Puppet manifests as variables.
 
 There are some [core facts](https://docs.puppet.com/facter/latest/core_facts.html) which are processed on all operating systems, but two additional types of facts can be used to extend facter; External Facts and Custom Facts.
 
@@ -356,7 +357,7 @@ and this would output a single string , instead of a number:
 
 ### `puppet facts` vs `facter`
 
-In my examples above I was using the command `puppet facts` whereas most people would probably use `facter`.  This is mostly because I'm lazy.  By default just running Facter won't evaluate custom facts in modules.  External facts are fine due to pluginsync.  By running `puppet facts`, Puppet automatically runs Facter with all of the custom facts paths loaded.
+In my examples above I was using the command `puppet facts` whereas most people would probably use `facter`.  This is mostly because I'm lazy.  By default just running Facter (`facter`) won't evaluate custom facts in modules.  External facts are fine due to pluginsync.  By running `puppet facts`, Puppet automatically runs Facter with all of the custom facts paths loaded.  Note, `facter -p` works but is deprecated in favour of `puppet facts`
 
 One other reason is debugging.  In most modern Puppet installations Facter is running as native Facter which can make debugging native Ruby code trickier (though not impossible).  However, when using Puppet as gem instead of installing the puppet-agent package, common during module development, it uses the Facter gem. The Facter gem allows for using standard Ruby debugging tools to help me out.
 
@@ -365,3 +366,5 @@ One other reason is debugging.  In most modern Puppet installations Facter is ru
 I hope this blog post helps you see that writing simple custom facts isn't too daunting.  In fact, the hardest part is setting up a Ruby development environment.  I came across a [blog post](https://blog.turtlesystems.co.uk/2017/06/28/Managing-Multiple-Rubies-on-Windows/) which explains setting up Ruby, very similar to my environment.  Even though it's for Chef, it still works for Puppet too.
 
 The source code for these examples is available on my [blog github repo](https://github.com/glennsarti/code-glennsarti.github.io/tree/master/customfacts).
+
+Thanks to Ethan Brown ([@ethanjbrown](https://twitter.com/ethanjbrown)) for editing.
