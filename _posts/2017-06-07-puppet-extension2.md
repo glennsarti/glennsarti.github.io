@@ -1,6 +1,6 @@
 ---
 title: Update - Puppet Language Server
-excerpt: "An update on my next big project: Puppet Langauge Server Extension"
+excerpt: "An update on my next big project: Puppet Language Server Extension"
 category:
   - blog
 header:
@@ -13,6 +13,7 @@ tags:
   - language
   - server
   - extension
+modified: 2016-08-11
 ---
 
 {% include toc icon="tags" %}
