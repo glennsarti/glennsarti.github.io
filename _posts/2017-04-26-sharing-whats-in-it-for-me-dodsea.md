@@ -1,6 +1,6 @@
 ---
 title: "Presentation - Sharing: What's in it for me!?"
-excerpt: This ignite talk looks at sharing through the eyes of a Sharer. What benefits do they receive out of sharing? What cultural or psychological benefits are there?
+excerpt: (DevOpsDays Seattle) This ignite talk looks at sharing through the eyes of a Sharer. What benefits do they receive out of sharing? What cultural or psychological benefits are there?
 read_time:
 category:
   - presentation
