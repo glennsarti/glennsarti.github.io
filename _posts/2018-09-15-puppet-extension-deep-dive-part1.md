@@ -13,6 +13,7 @@ tags:
   - language
   - server
   - extension
+modified: 2017-10-04
 ---
 
 {% include toc icon="tags" %}
@@ -299,4 +300,6 @@ That wraps it up for the client side only language extension code.  In the next 
 
 [Part 1 - Introduction to the extension](../puppet-extension-deep-dive-part1)
 
-Part 2 - Introduction to the Language Server
+[Part 2 - Introduction to the Language Server](../puppet-extension-deep-dive-part2)
+
+Part 3 - JSON RPC handler and message router
