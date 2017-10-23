@@ -1,6 +1,6 @@
 ---
 title: VS Code Puppet Extension Deep Dive - Part 1
-excerpt: Diving deep into the VS Code extension for Puppet - Part 1
+excerpt: Introduction to the extension
 category:
   - blog
 header:
@@ -13,7 +13,7 @@ tags:
   - language
   - server
   - extension
-modified: 2017-10-04
+modified: 2018-01-02
 ---
 
 {% include toc icon="tags" %}
@@ -302,4 +302,6 @@ That wraps it up for the client side only language extension code.  In the next 
 
 [Part 2 - Introduction to the Language Server](../puppet-extension-deep-dive-part2)
 
-Part 3 - JSON RPC handler and message router
+[Part 3 - JSON RPC handler and message router](../puppet-extension-deep-dive-part3)
+
+Part 4 - Language Providers
