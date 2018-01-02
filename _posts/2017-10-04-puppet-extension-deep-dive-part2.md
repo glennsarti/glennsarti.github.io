@@ -1,6 +1,6 @@
 ---
 title: VS Code Puppet Extension Deep Dive - Part 2
-excerpt: Diving deep into the VS Code extension for Puppet - Part 2
+excerpt: Introduction to the Language Server
 category:
   - blog
 header:
@@ -13,6 +13,7 @@ tags:
   - language
   - server
   - extension
+modified: 2018-01-02
 ---
 
 {% include custom/mermaid.html %}
@@ -84,7 +85,7 @@ subgraph VS Code Extension
 end
 
 subgraph Puppet Language Server
-  layer0(TCP Server) 
+  layer0(TCP Server)
   layer1(Generic client connection)
   layer2(JSON RPC Handler)
   layer3(Message Router)
@@ -203,7 +204,7 @@ def self.rpc_server(options)
 end
 ```
 
-The trap statement calls `server.stop` which is a bug as it should be `server.stop_services`.  I'll get this fixed up 
+The trap statement calls `server.stop` which is a bug as it should be `server.stop_services`.  I'll get this fixed up
 {: .notice--danger}
 
 So, we are creating;
@@ -251,4 +252,6 @@ That wraps it up for the beginning of the Language Server.  In this post I intro
 
 [Part 2 - Introduction to the Language Server](../puppet-extension-deep-dive-part2)
 
-Part 3 - JSON RPC handler and message router
+[Part 3 - JSON RPC handler and message router](../puppet-extension-deep-dive-part3)
+
+Part 4 - Language Providers
