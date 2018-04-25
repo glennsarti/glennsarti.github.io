@@ -16,7 +16,7 @@ tags:
   - nano
 ---
 
-![Docker, so hot right now](https://cdn.meme.am/instances/56183297.jpg){: .align-center}
+![Docker, so hot right now]({{ site.url }}/blog-images/hot-docker-containers.png){: .align-center}
 
 # Docker Docker Docker!
 
@@ -38,7 +38,7 @@ Windows Containers are just like their Linux based Containers, but run on Window
 > Basically, a container is an isolated place where an application can run without affecting the rest of the system and without the system affecting the application. Containers are the next evolution in virtualization.
 >
 > If you were inside a container, it would look very much like you were inside a freshly installed physical computer or a virtual machine. And, to Docker, a Windows Server Container can be managed in the same way as any other container.
-> 
+>
 > [Source - Windows Containers](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/index)
 
 
@@ -113,7 +113,7 @@ Fortunately this was an easy problem to solve.  Using the powershell code in the
 
 [Source](https://github.com/glennsarti/code-glennsarti.github.io/blob/master/neo4j-windows-containers/build-neo4jent-context.ps1)
 
-This script needs to be run before the docker image can be built.  As stated earlier, it is responsible for downlading the Neo4j Enterprise and Java distributions.  It also sets up the Dockerfile and entrypoint scripts.  
+This script needs to be run before the docker image can be built.  As stated earlier, it is responsible for downlading the Neo4j Enterprise and Java distributions.  It also sets up the Dockerfile and entrypoint scripts.
 
 
 ### `Dockerfile`
@@ -164,17 +164,17 @@ This entry point file somewhat resembles the [docker-entrypoint.sh](https://gith
 - You pass in any other string to run an arbitrary command in the image e.g. `cmd.exe` or `powershell.exe`
 
 - You modify the behaviour of the image by using environment variables:
-  
+
   *Neo4j HA variables*
-  
+
   * `NEO4J_dbms_mode`
   * `NEO4J_ha_serverId`
   * `NEO4J_ha_host_data`
   * `NEO4J_ha_host_coordination`
   * `NEO4J_ha_initialHosts`
-  
+
   *Windows specific*
-  
+
   * `NEO4J_startup_delay` - Delays the start of the Neo4j Server for the specified number of seconds
 
 For example;
@@ -358,7 +358,7 @@ services:
     networks:
       neo4jcluster:
         ipv4_address: "192.168.200.202"
- 
+
   # Arbiter instance only
   neo4j_3:
     depends_on:
@@ -433,12 +433,12 @@ neo4j_2_1  | 2016-12-04 04:33:04.080+0000 INFO  The store does not represent the
 neo4j_1_1  | 2016-12-04 04:33:04.218+0000 INFO  Instance 2  is unavailable as backup
 neo4j_2_1  | 2016-12-04 04:33:04.219+0000 INFO  Instance 2 (this server)  is unavailable as backup
 ...
-neo4j_2_1  | 2016-12-04 04:33:06.048+0000 INFO  Copying schema\label\lucene\labelStore\1\segments_1            
-neo4j_2_1  | 2016-12-04 04:33:06.626+0000 INFO  Copied schema\label\lucene\labelStore\1\segments_1 71.00 B     
-neo4j_2_1  | 2016-12-04 04:33:06.637+0000 INFO  Done, copied 17 files                                          
-neo4j_1_1  | 2016-12-04 04:33:07.753+0000 INFO  Remote interface available at http://0.0.0.0:7474/             
-neo4j_2_1  | 2016-12-04 04:33:10.236+0000 INFO  Finished copying store from master                             
-neo4j_2_1  | 2016-12-04 04:33:10.307+0000 INFO  Checking store consistency with master                         
+neo4j_2_1  | 2016-12-04 04:33:06.048+0000 INFO  Copying schema\label\lucene\labelStore\1\segments_1
+neo4j_2_1  | 2016-12-04 04:33:06.626+0000 INFO  Copied schema\label\lucene\labelStore\1\segments_1 71.00 B
+neo4j_2_1  | 2016-12-04 04:33:06.637+0000 INFO  Done, copied 17 files
+neo4j_1_1  | 2016-12-04 04:33:07.753+0000 INFO  Remote interface available at http://0.0.0.0:7474/
+neo4j_2_1  | 2016-12-04 04:33:10.236+0000 INFO  Finished copying store from master
+neo4j_2_1  | 2016-12-04 04:33:10.307+0000 INFO  Checking store consistency with master
 ...
 neo4j_2_1  | 2016-12-04 04:33:16.086+0000 DEBUG Mounting servlet at [/db/manage]
 neo4j_2_1  | 2016-12-04 04:33:16.126+0000 DEBUG Mounting servlet at [/db/data]
