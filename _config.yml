@@ -48,7 +48,7 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 
 # Minimal Mistakes Theme information
-theme: minimal-mistakes-jekyll
+# The `theme` property must not be set here otherwise github pages complains
 # Remember to update the _config.yml with the same version
 remote_theme: mmistakes/minimal-mistakes@4.11.1
 minimal_mistakes_skin: "default"
