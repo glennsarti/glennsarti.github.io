@@ -16,8 +16,6 @@ tags:
 modified: 2016-08-11
 ---
 
-{% include toc icon="tags" %}
-
 It's been a while since my last blog post and I've been busy!  I have been working with [James Pogran](https://github.com/jpogran) to get a working Puppet Language Server extension for VS Code, which was part of my [Next Big Project](../next-big-project) post.
 
 ## So what have we done?

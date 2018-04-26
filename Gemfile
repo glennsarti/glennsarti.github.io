@@ -3,22 +3,12 @@ source ENV['GEM_SOURCE'] || "https://rubygems.org"
 gem "rake"
 
 if Gem.win_platform?
-  # Jekyll 3.2.1 allows --watch on Windows, future versions don't  :sad:
-  gem "jekyll", "=3.2.1"
-  gem "github-pages", "101"
-
-  gem "wdm", "~> 0.1.0"
+  # Jekyll really hates Windows :-(  Need to use WSL instead
+  raise 'Jekyll really hates Windows :-(  Need to use WSL instead'
 else
-  # WSL or native non-Windows
-  gem "github-pages", group: :jekyll_plugins
-  
-  group :jekyll_plugins do
-    gem "jekyll-paginate"
-    gem "jekyll-sitemap"
-    gem "jekyll-gist"
-    gem "jekyll-feed"
-    gem "jemoji"
-  end
+  gem "jekyll", "~> 3.5"
+  # Remember to update the _config.yml with the same version
+  gem "minimal-mistakes-jekyll", "4.11.1"
 end
 
 # Evaluate Gemfile.local if it exists

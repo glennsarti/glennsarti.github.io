@@ -13,8 +13,6 @@ tags:
   - portland
 ---
 
-{% include toc icon="tags" %}
-
 ## DevOps Days Portland 2017
 
 ### Day 0 - Speaker's dinner

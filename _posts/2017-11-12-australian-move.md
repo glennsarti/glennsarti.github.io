@@ -1,6 +1,6 @@
 ---
 title: Blogging on pause - Moving to Australia
-excerpt: I'm moving back to Austalia!!
+excerpt: I'm moving back to Australia!!
 category:
   - blog
 header:

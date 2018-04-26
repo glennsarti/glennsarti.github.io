@@ -17,8 +17,6 @@ tags:
 modified: 2017-07-14
 ---
 
-{% include toc icon="tags" %}
-
 ## Puppet, PowerShell and Facter
 
 Puppet uses a tool called [Facter](https://docs.puppet.com/facter/latest/index.html) to gather system information during a Puppet run.

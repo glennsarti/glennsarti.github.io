@@ -14,8 +14,6 @@ tags:
   - docker
 ---
 
-{% include toc icon="tags" %}
-
 I wrote a [blog post]({{ site.url }}/blog/neo4j-nano-containers) about running a Neo4j cluster in Windows Containers but I didn't go into too much detail about setting them up.  In this post, I'll walk through setting up Windows Containers and some helpful tips to avoid some problems.
 
 This post is mainly aggregated documentation from Docker, Microsoft, [Stefan Scherer](https://stefanscherer.github.io/) and other sources from when I was installing Windows Containers myself.  Also, this is about Windows Containers, not [Docker for Windows](https://docs.docker.com/docker-for-windows/), which is a different product.
@@ -77,7 +75,7 @@ Containers are created when you execute a Container Image, however each Containe
 Windows Containers has two isolation models, unlike Linux which has only one.
 
 > Windows Server Containers - provide application isolation through process and namespace isolation technology. A Windows Server container shares a kernel with the container host and all containers running on the host.
-> 
+>
 > Hyper-V Containers – expand on the isolation provided by Windows Server Containers by running each container in a highly optimized virtual machine. In this configuration, the kernel of the container host is not shared with the Hyper-V Containers.
 
 Server 2016 supports both isolation modes, while Windows 10 only supports the Hyper-V Containers. I could not find any documentation on the isolation modes supported by Nano Server but I suspect it is both isolation modes.
@@ -308,7 +306,7 @@ These are more complex networking options which I don't feel most development en
 This is the most common networking option for Windows Containers.  The Container Host will use the native WinNAT features of the operating system to assign an IP address to Containers and then use port mapping to redirect network traffic appropriately.  However there are some [limitations](https://blogs.technet.microsoft.com/virtualization/2016/05/25/windows-nat-winnat-capabilities-and-limitations/) with the NAT network;
 
 > 1. Only one NAT internal IP prefix is supported per container host, so 'multiple' NAT networks must be defined by partitioning the prefix
-> 
+>
 > 2. Container endpoints are only reachable from the container host using container internal IPs and ports
 
 #### Issue - Only one NAT prefix
