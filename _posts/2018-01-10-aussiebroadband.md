@@ -12,8 +12,6 @@ tags:
   - script
 ---
 
-{% include toc icon="tags" %}
-
 [Source Code](https://github.com/glennsarti/PSMyAussieBroadband)
 
 ---

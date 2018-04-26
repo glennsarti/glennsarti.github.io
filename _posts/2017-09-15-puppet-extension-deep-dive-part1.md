@@ -16,8 +16,6 @@ tags:
 modified: 2018-01-02
 ---
 
-{% include toc icon="tags" %}
-
 [James Pogran](https://github.com/jpogran) and I have been busy writing new features and fixing bugs in the Puppet VS Code extension.  So for the next series of blog posts I am going to dive deep into the source code for the extension and explain how parts of it work and how to setup a development environment for the extension.
 
 But first some handy links:

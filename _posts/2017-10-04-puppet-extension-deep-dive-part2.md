@@ -17,7 +17,6 @@ modified: 2018-01-02
 ---
 
 {% include custom/mermaid.html %}
-{% include toc icon="tags" %}
 
 # Introduction to the Language Server
 

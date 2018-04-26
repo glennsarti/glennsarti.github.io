@@ -15,8 +15,6 @@ tags:
   - extension
 ---
 
-{% include toc icon="tags" %}
-
 # JSON RPC handler and message router
 
 This is part 3 of a series about the Puppet Extension for Visual Studio Code.  See the bottom of this post for links to all other posts.
