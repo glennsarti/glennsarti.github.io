@@ -13,6 +13,7 @@ tags:
   - 2018
   - pester
 read_time: false
+modified: 2018-05-03
 ---
 
 ### [PowerShell Summit North America 2018](https://powershell.org/summit/)
@@ -25,7 +26,7 @@ We see a lot talks on testing PowerShell with Pester, but are the tests we write
 
 [Presentation](https://speakerdeck.com/glennsarti/beyond-pester-101-applying-testing-principles-to-powershell)
 
-Recording - TBA
+[Recording](https://www.youtube.com/watch?v=NrUxgSaFvtk&index=26&list=PLfeA8kIs7CocGXuezOoYtLRdnK9S_Mq3e&t=0s)
 
 ## Resources
 
