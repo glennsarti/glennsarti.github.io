@@ -13,14 +13,14 @@ tags:
   - language
   - server
   - extension
-modified: 2018-01-02
+modified: 2018-06-08
 ---
 
 [James Pogran](https://github.com/jpogran) and I have been busy writing new features and fixing bugs in the Puppet VS Code extension.  So for the next series of blog posts I am going to dive deep into the source code for the extension and explain how parts of it work and how to setup a development environment for the extension.
 
 But first some handy links:
 
-[Source Code](https://github.com/jpogran/puppet-vscode)
+[Source Code](https://github.com/lingua-pupuli)
 
 [Extension on the VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=jpogran.puppet-vscode)
 
@@ -28,7 +28,7 @@ But first some handy links:
 
 # What is a VS Code extension?
 
-The VS Code editor has an easy to use [extension system](https://code.visualstudio.com/docs/extensions/overview) to add features.  In our case we wanted to add Puppet language support to the editor so that we could give a more immersive experience for people writing Puppet manifests and modules.  For the initial work we concentrated on the client side Extension and Language Server;
+The VS Code editor has an easy to use [extension system](https://code.visualstudio.com/docs/extensions/overview) to add features.  In our case we wanted to add Puppet language support to the editor so that we could give a more immersive experience for people writing Puppet manifests and modules.  For the initial work we concentrated on the client side Extension and Language Server.
 
 ## Extension
 
@@ -76,13 +76,13 @@ Currently being worked on 😉
 
 ## Source code layout
 
-The source code is located on [Github](https://github.com/jpogran/puppet-vscode) and is composed of the VS Code Extension in the [`client/`](https://github.com/jpogran/puppet-vscode/tree/master/client) directory and the Puppet Language Server in the [`server/`](https://github.com/jpogran/puppet-vscode/tree/master/server) directory
+The source code is located on [Github](https://github.com/lingua-pupuli) and is composed of the VS Code Extension in the [puppet-vscode](https://github.com/lingua-pupuli/puppet-vscode) project and the Puppet Language Server in the [puppet-editor-services](https://github.com/lingua-pupuli/puppet-editor-services) project.
 
-The majority of the client code is contained in the [`client/src`](https://github.com/jpogran/puppet-vscode/tree/master/client/src) directory, and the [`package.json`](https://github.com/jpogran/puppet-vscode/blob/master/client/package.json) file.  Don't worry, we'll dive into these files later.
+The majority of the client code is contained in the [`src`](https://github.com/lingua-pupuli/puppet-vscode/tree/master/src) directory, and the [`package.json`](https://github.com/lingua-pupuli/puppet-vscode/blob/master/package.json) file.  Don't worry, we'll dive into these files later.
 
 ## Existing documentation
 
-The extension [Readme](https://github.com/jpogran/puppet-vscode/blob/master/README.md) file, the [Language Server Readme](https://github.com/jpogran/puppet-vscode/blob/master/server/README.md) and [Language Server documentation](https://github.com/jpogran/puppet-vscode/tree/master/server/docs) contain installation and development instructions for both the extension and Puppet Language Server.  Instead of repeating that here, I suggest you have a quick read of them.
+The extension [Readme](https://github.com/lingua-pupuli/puppet-vscode/blob/master/README.md) file, the [Language Server Readme](https://github.com/lingua-pupuli/puppet-editor-services/blob/master/README.md) and [Language Server documentation](https://github.com/lingua-pupuli/puppet-editor-services/tree/master/docs) contain installation and development instructions for both the extension and Puppet Language Server.  Instead of repeating that here, I suggest you have a quick read of them.
 
 # Extension Deep Dive
 
@@ -113,7 +113,7 @@ Firstly the `package.json` file snippet defines where the contribution is locate
 * The `id` of `puppet` is important and will be used throughout the extension
 * The first listed alias of `Puppet` is used when displaying the langauge name in the editor.  You will see this in the bottom right hand corner of VS Code
 * The `extensions` section lists which file extensions will activate this language contribution
-* The `configuration` item specifies the relative path to a language configuration file.  In our source code this is [`client/languages/puppet.configuration.json`](https://github.com/jpogran/puppet-vscode/tree/master/client/languages/puppet.configuration.json)
+* The `configuration` item specifies the relative path to a language configuration file.  In our source code this is [`languages/puppet.configuration.json`](https://github.com/lingua-pupuli/puppet-vscode/blob/master/languages/puppet.configuration.json)
 
 The language configuration file looks similar to the following:
 
@@ -175,9 +175,9 @@ Firstly the `package.json` file snippet defines where the contribution is locate
 </plist>
 ```
 
-* The `path` item specifies the relative path to a language configuration file.  In our source code this is [`client/syntaxes/puppet.tmLanguage`](https://github.com/jpogran/puppet-vscode/tree/master/client/syntaxes/puppet.tmLanguage)
+* The `path` item specifies the relative path to a language configuration file.  In our source code this is [`syntaxes/puppet.tmLanguage`](https://github.com/lingua-pupuli/puppet-vscode/blob/master/syntaxes/puppet.tmLanguage)
 
-It is outside the scope of this blog post to describe how to write TextMate grammar files.  I believe the grammar file we use in the extension is based on one published by [Brice Figureau](https://github.com/masterzen/puppet-textmate-bundle) although it should possibly be updated to this [fork](https://github.com/puppet-textmate-bundle/puppet-textmate-bundle)
+It is outside the scope of this blog post to describe how to write TextMate grammar files.  The grammar file we use in the extension comes from the [puppet-editor-syntax](https://github.com/lingua-pupuli/puppet-editor-syntax) project.
 
 ## JSON Validation Contribution
 
@@ -185,7 +185,7 @@ Puppet [metadata.json](https://docs.puppet.com/puppet/5.1/modules_metadata.html)
 
 Firstly the `package.json` file snippet defines where the contribution is located:
 
-``` typescript
+``` json
     "contributes": {
         "jsonValidation": [
             {
@@ -198,7 +198,24 @@ Firstly the `package.json` file snippet defines where the contribution is locate
 * Unlike other contributions there is no `language` setting.  Instead we define a file matching rule.  In this case we only care that the file is called `metadata.json`
 * The `Url` setting specifies where the schema document is located.  Either as a local source file, like our extension does, or a remote request, for example, to the [JSON Schema Store website](http://schemastore.org/json).
 
-Puppet has not published a JSON Schema document so I created one based on the rules defined in [Available `metadata.json` keys](https://docs.puppet.com/puppet/5.1/modules_metadata.html#available-metadatajson-keys).  In our source code this is [`client/src/metadata-json-schema.json`](https://github.com/jpogran/puppet-vscode/tree/master/client/src/metadata-json-schema.json).  Ideally I'd like to merge and then manage this file in the [metadata-json-lint gem](https://github.com/voxpupuli/metadata-json-lint) ([Github Issue #92](https://github.com/voxpupuli/metadata-json-lint/issues/92))
+Puppet has not published a JSON Schema document so I created one based on the rules defined in [Available metadata.json keys](https://docs.puppet.com/puppet/5.1/modules_metadata.html#available-metadatajson-keys) web page.  In our source code this is [`src/metadata-json-schema.json`](https://github.com/lingua-pupuli/puppet-vscode/blob/be7f6e4c9476b69da5ee65670fb9b1cb1629cb51/client/src/metadata-json-schema.json).  Ideally I'd like to merge and then manage this file in the [metadata-json-lint gem](https://github.com/voxpupuli/metadata-json-lint) ([Github Issue #92](https://github.com/voxpupuli/metadata-json-lint/issues/92))
+
+Update - Puppet now publish JSON schemas on the Puppet Forge [https://forgeapi.puppet.com/schemas](https://forgeapi.puppet.com/schemas) for metadata.json and Puppet tasks JSON files.  This was updated in version [0.7.2](https://github.com/lingua-pupuli/puppet-vscode/commit/57a5590b9745391e6bc2acdadae84021dce3eefd) of the extension
+{: .notice}
+``` json
+    "contributes": {
+        "jsonValidation": [
+        {
+            "fileMatch": "/metadata.json",
+            "url": "https://forgeapi.puppet.com/schemas/module.json"
+        },
+        {
+            "fileMatch": "tasks/*.json",
+            "url": "https://forgeapi.puppet.com/schemas/task.json"
+        }
+        ],
+```
+
 
 ## Snippets Contribution
 
@@ -220,7 +237,7 @@ Firstly the `package.json` file snippet defines where the contribution is locate
         ],
 ```
 
-* Each snippets section specifies which configuration file to use for which language.  In our case, we have two files, one for the `puppet` language ([./snippets/keywords.snippets.json](https://github.com/jpogran/puppet-vscode/tree/master/client/snippets/keywords.snippets.json)) and the other for the `json` language ([./snippets/metadata.snippets.json](https://github.com/jpogran/puppet-vscode/tree/master/client/snippets/metadata.snippets.json)) which we use for the `metadata.json` file.
+* Each snippets section specifies which configuration file to use for which language.  In our case, we have two files, one for the `puppet` language ([./snippets/keywords.snippets.json](https://github.com/lingua-pupuli/puppet-vscode/tree/master/snippets/keywords.snippets.json)) and the other for the `json` language ([./snippets/metadata.snippets.json](https://github.com/lingua-pupuli/puppet-vscode/tree/master/snippets/metadata.snippets.json)) which we use for the `metadata.json` file.
 
 A snippet configuration file is a JSON document which is described [here](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_creating-your-own-snippets) but let's look at part of the `keywords.snippets.json`.
 
@@ -302,4 +319,6 @@ That wraps it up for the client side only language extension code.  In the next 
 
 [Part 3 - JSON RPC handler and message router](../puppet-extension-deep-dive-part3)
 
-Part 4 - Language Providers
+[Part 4 - Welcome to Lingua Pupuli](../puppet-extension-deep-dive-part4)
+
+Part 5 - Language Providers

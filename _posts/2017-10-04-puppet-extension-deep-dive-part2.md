@@ -13,7 +13,7 @@ tags:
   - language
   - server
   - extension
-modified: 2018-01-02
+modified: 2018-06-08
 ---
 
 {% include custom/mermaid.html %}
@@ -22,7 +22,7 @@ modified: 2018-01-02
 
 This is part 2 of a series about the Puppet Extension for Visual Studio Code.  See the bottom of this post for links to all other posts.
 
-[Source Code](https://github.com/jpogran/puppet-vscode)
+[Source Code](https://github.com/lingua-pupuli)
 
 [Extension on the VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=jpogran.puppet-vscode)
 
@@ -132,12 +132,11 @@ The `Message Router` also holds a virtual document store, which contains an in-m
 
 ### Providers
 
-The provider classes (`completion_provider.rb`, `document_validator.rb`, `hover_provider.rb`) implement the various puppet languages services.  Typically they mirror the language service services, e.g. the `textDocument/hover` request is serviced by the hover provider.
+The provider classes (`completion_provider.rb`, `document_validator.rb`, `hover_provider.rb`) implement the various puppet languages services.  Typically they mirror the language service services, e.g. the `textDocument/hover` request is serviced by a hover provider.
 
 ### Puppet Helpers
 
-Many of the providers use common code.  The Puppet Helpers (`facter_helper.rb`, `puppet_helper.rb`, `puppet_parser_helper.rb`) abstract away common tasks which make the providers smaller and easier to edit.  The helpers also provider a caching layer so that
-Puppet and Facter do not need to be evaluated as often, for example getting all the facter facts.
+Many of the providers use common code.  The Puppet Helpers (`facter_helper.rb`, `puppet_helper.rb`, `puppet_parser_helper.rb`) abstract away common tasks which make the providers smaller and easier to edit.  The helpers also provider a caching layer so that Puppet and Facter do not need to be evaluated as often, for example getting all the facter facts.
 
 ### Puppet / Facter / Hiera
 
@@ -151,9 +150,9 @@ So, I had to look for pure ruby socket server.  Unfortunately, there were no gem
 
 ## Implementation
 
-The TCP Server is basically a simple synchronous socket server which invokes other methods, on new threads, as socket events occur.  Socket events would be; A client connects, a client sends data, a client disconnects and an error occurred.  The TCP Server is only concerned with the most basic of TCP functions, so all interpretation of the data happens it later layers (Generic Client connection and JSON RPC handler)
+The TCP Server is basically a simple synchronous socket server which invokes other methods, on new threads, as socket events occur.  Socket events would be; A client connects, a client sends data, a client disconnects and an error occurred.  The TCP Server is only concerned with the most basic of TCP functions, so all interpretation of the data, happens it later layers (Generic Client connection and JSON RPC handler)
 
-The `PuppetLanguageServer::SimpleTCPServer` class is the main entry point and only has a few public methods.
+The `PuppetEditorServices::SimpleTCPServer` class is the main entry point and only has a few public methods.
 
 ### Public methods
 
@@ -172,7 +171,7 @@ The add_service method instructs the TCP Server to listen on the interface and p
 *`start`*
 
 ``` ruby
-start(handler = PuppetLanguageServer::SimpleTCPServerConnection, connection_options = {}, max_threads = 2)
+start(handler = PuppetEditorServices::SimpleTCPServerConnection, connection_options = {}, max_threads = 2)
 ```
 
 The start method is a blocking call which;
@@ -253,4 +252,6 @@ That wraps it up for the beginning of the Language Server.  In this post I intro
 
 [Part 3 - JSON RPC handler and message router](../puppet-extension-deep-dive-part3)
 
-Part 4 - Language Providers
+[Part 4 - Welcome to Lingua Pupuli](../puppet-extension-deep-dive-part4)
+
+Part 5 - Language Providers
