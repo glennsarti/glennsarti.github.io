@@ -13,13 +13,14 @@ tags:
   - language
   - server
   - extension
+modified: 2018-06-08
 ---
 
 # JSON RPC handler and message router
 
 This is part 3 of a series about the Puppet Extension for Visual Studio Code.  See the bottom of this post for links to all other posts.
 
-[Source Code](https://github.com/jpogran/puppet-vscode)
+[Source Code](https://github.com/lingua-pupuli)
 
 [Extension on the VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=jpogran.puppet-vscode)
 
@@ -63,7 +64,7 @@ The JSON RPC 2.0 specification also allows for batch operations, however VS Code
 
 ### Implementation
 
-The implementation used in the [Puppet Language Server](https://github.com/jamespogran/puppet-vscode/blob/master/server/lib/puppet-languageserver/json_rpc_handler.rb) was heavily inspired by the JSON parsing in the [PowerShell Language Server](https://github.com/PowerShell/PowerShellEditorServices).  The `receive_data` method keeps appending bytes coming from the TCP Server into a buffer.  As the buffer fills, it is examined for a valid JSON RPC Header, and then makes sure the buffer contains all of the expected content.  Once there is enough data in the buffer it extracts the entire message for further processing and resets the buffer.  There are probably more effecient methods to do this, however due to the low request rate the effeciency isn't required yet.
+The implementation used in the [Puppet Language Server](https://github.com/lingua-pupuli/puppet-editor-services/blob/master/lib/puppet-languageserver/json_rpc_handler.rb) was heavily inspired by the JSON parsing in the [PowerShell Language Server](https://github.com/PowerShell/PowerShellEditorServices).  The `receive_data` method keeps appending bytes coming from the TCP Server into a buffer.  As the buffer fills, it is examined for a valid JSON RPC Header, and then makes sure the buffer contains all of the expected content.  Once there is enough data in the buffer it extracts the entire message for further processing and resets the buffer.  There are probably more effecient methods to do this, however due to the low request rate the effeciency isn't required yet.
 
 The `parse_data` method then takes the extracted message content and converts it from a JSON string into a Ruby object.  It then performs validation that the RPC version is correct (`2.0`) and whether the message is a [Request](https://github.com/Microsoft/language-server-protocol/blob/master/protocol.md#requestmessage) or [Notification](https://github.com/Microsoft/language-server-protocol/blob/master/protocol.md#notification-message).  Then the message is sent to the Message Router for processing.
 
@@ -100,7 +101,7 @@ The language protocol describes three types of messages
 3. A custom message.  This is a message that is not described in the protocol but can still be sent over the same channel.
    For example, the Puppet Language Server uses a custom request for the Node Graph Preview.  The client sends a `puppet/compileNodeGraph` request and responds with a `CompileNodeGraphResponse` object.
 
-The [message router](https://github.com/jamespogran/puppet-vscode/blob/master/server/lib/puppet-languageserver/message_router.rb) is composed of a few modules
+The [message router](https://github.com/lingua-pupuli/puppet-editor-services/blob/master/lib/puppet-languageserver/message_router.rb) is composed of a few modules
 
 ### Document Store
 
@@ -184,4 +185,6 @@ In this post I looked at how the JSON RPC messages are interpreted, and then act
 
 [Part 3 - JSON RPC handler and message router](../puppet-extension-deep-dive-part3)
 
-Part 4 - Language Providers
+[Part 4 - Welcome to Lingua Pupuli](../puppet-extension-deep-dive-part4)
+
+Part 5 - Language Providers
