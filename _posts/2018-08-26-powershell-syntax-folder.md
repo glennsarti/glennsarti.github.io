@@ -170,6 +170,7 @@ When you tokenize the document you get the following tokens.  A token is a start
 | `{`                    | 30         | 31       | `source.powershell`, `meta.scriptblock.powershell`, `punctuation.section.braces.begin.powershell` |
 | `\n`                   | 31         | 32       | `source.powershell`, `meta.scriptblock.powershell` |
 | `<#`                   | 32         | 34       | `source.powershell`, `meta.scriptblock.powershell`, `comment.block.powershell`, `punctuation.definition.comment.block.begin.powershell` |
+
 ...
 
 ## Converting tokens to folding regions
