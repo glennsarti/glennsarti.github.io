@@ -384,7 +384,7 @@ And then finally in folding feature [file](https://github.com/PowerShell/vscode-
 
 ## And then the tests started failing ...
 
-Not long after the initial PR was merged, the integration tests I created started failing, specifically right after VS Code 1.25.0 was released.  Fortunately [Keith Hill](@https://github.com/rkeithhill) found it fairly quickly, and as luck would have it, the vscode-textmate node module had a major version jump from 3 to 4.  Which of course had breaking changes, which broke the Folding Provider.
+Not long after the initial PR was merged, the integration tests I created started failing, specifically right after VS Code 1.25.0 was released.  Fortunately [Keith Hill](https://github.com/rkeithhill) found it fairly quickly, and as luck would have it, the vscode-textmate node module had a major version jump from 3 to 4.  Which of course had breaking changes, which broke the Folding Provider.
 
 Keith Hill raised an initial [Pull Request](https://github.com/PowerShell/vscode-powershell/pull/1410) which I then took and added some extra fixtures.  And in no time it was fixed ...
 
@@ -498,7 +498,7 @@ The full list of Pull Requests is at [Github](https://github.com/PowerShell/vsco
 
 3. TESTS ARE IMPORTANT and will save your ass.
 
-4. Putting up my code early gave the maintainers ([Tyler](https://twitter.com/TylerLeonhardt), [Rob](https://github.com/rjmholt) and [Keith](@https://github.com/rkeithhill)) plenty of time to comment and shape the direction of this complex feature.  Even though there were a lot of comments (159 at last count), it made it easier for them to finally press the "merge" button because they understood it much better.  Instead of me just throwing up a Pull Request and going "Ta Da".  Communication is important
+4. Putting up my code early gave the maintainers ([Tyler](https://twitter.com/TylerLeonhardt), [Rob](https://github.com/rjmholt) and [Keith](https://github.com/rkeithhill)) plenty of time to comment and shape the direction of this complex feature.  Even though there were a lot of comments (159 at last count), it made it easier for them to finally press the "merge" button because they understood it much better.  Instead of me just throwing up a Pull Request and going "Ta Da".  Communication is important
 
 5. Take the time to document your functions and code.  It helps the project maintainers AND your future self when come back to it a few weeks later
 
