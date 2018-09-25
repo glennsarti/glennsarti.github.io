@@ -5,7 +5,7 @@ read_time:
 category:
   - presentation
 header:
-  overlay_image: /images/header-sharing-whats-in-it-for-me.jpg
+  overlay_image: /images/header-sharing-whats-in-it-for-me2.png
   overlay_filter: 0.5
   teaser: /images/teaser-sharing-whats-in-it-for-me.png
 tags:
@@ -26,9 +26,31 @@ Sharing. It’s one of the four pillars of CAMS. We consume so much shared conte
 
 This ignite talk looks at sharing through the eyes of a Sharer. What benefits do they receive out of sharing? What cultural or psychological benefits are there?
 
+A huge thank you to [Tiffany](https://twitter.com/thelongshanx) and [Michael](https://twitter.com/barbariankb) for their awesome editing and being the best rubber ducks.
+
 [Presentation](https://speakerdeck.com/glennsarti/ndc-sydney-sharing-whats-in-it-for-me)
 
 Recording - TBA
+
+---
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I really love this talk by <a href="https://twitter.com/GlennSarti?ref_src=twsrc%5Etfw">@GlennSarti</a> I’ll be referencing his slides — you should check it out!! “Sharing: What’s in it for me?” <a href="https://t.co/DchjkMKJD0">https://t.co/DchjkMKJD0</a></p>&mdash; nicole forsgren (@nicolefv) <a href="https://twitter.com/nicolefv/status/1042339824470917121?ref_src=twsrc%5Etfw">September 19, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Sharing is a crucial component of high performing teams <a href="https://twitter.com/GlennSarti?ref_src=twsrc%5Etfw">@GlennSarti</a> <a href="https://twitter.com/hashtag/NDCSydney?src=hash&amp;ref_src=twsrc%5Etfw">#NDCSydney</a> <a href="https://t.co/Xpy3YUObAU">pic.twitter.com/Xpy3YUObAU</a></p>&mdash; Klee Thomas (@kleeut) <a href="https://twitter.com/kleeut/status/1042279405748252672?ref_src=twsrc%5Etfw">September 19, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Really cool perspective on sharing <a href="https://t.co/XU8rUzvZBN">https://t.co/XU8rUzvZBN</a></p>&mdash; Sonya Waitman (@sewaitman) <a href="https://twitter.com/sewaitman/status/1042503149146136576?ref_src=twsrc%5Etfw">September 19, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">In with a good crowd with for the lightning talks here at <a href="https://twitter.com/hashtag/NDCSydney?src=hash&amp;ref_src=twsrc%5Etfw">#NDCSydney</a>  with <a href="https://twitter.com/GlennSarti?ref_src=twsrc%5Etfw">@GlennSarti</a>, <a href="https://twitter.com/StavrosTheGeek?ref_src=twsrc%5Etfw">@StavrosTheGeek</a> and <a href="https://twitter.com/fabienruffin?ref_src=twsrc%5Etfw">@fabienruffin</a> <a href="https://t.co/HXPwoo8Lw0">pic.twitter.com/HXPwoo8Lw0</a></p>&mdash; Klee Thomas (@kleeut) <a href="https://twitter.com/kleeut/status/1042293326047674368?ref_src=twsrc%5Etfw">September 19, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">This looks great! We talk a lot about sharing in the 2018 <a href="https://twitter.com/hashtag/StateofDevOps?src=hash&amp;ref_src=twsrc%5Etfw">#StateofDevOps</a> report and the importance of prioritizing reuse of deployment and testing patterns in the early stages of evolution. <a href="https://t.co/VWRwNq68GJ">https://t.co/VWRwNq68GJ</a></p>&mdash; Alanna Brown (@alannapb) <a href="https://twitter.com/alannapb/status/1042282596053311488?ref_src=twsrc%5Etfw">September 19, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">“You’ve got to think about what the duck knows: nothing!” <a href="https://twitter.com/GlennSarti?ref_src=twsrc%5Etfw">@GlennSarti</a> talking sharing <a href="https://twitter.com/hashtag/ndcsydney?src=hash&amp;ref_src=twsrc%5Etfw">#ndcsydney</a> <a href="https://t.co/kw0G3pmO7W">pic.twitter.com/kw0G3pmO7W</a></p>&mdash; Ian Hughes (@ian_hughes) <a href="https://twitter.com/ian_hughes/status/1042279248063393793?ref_src=twsrc%5Etfw">September 19, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ### Transcript
 
@@ -199,48 +221,48 @@ Thankyou.
 
 #### Patrick Debois
 
-- https://jaxenter.com/s-is-for-sharing-tells-the-father-of-devops-patrick-debois-105077.html
+- [https://jaxenter.com/s-is-for-sharing-tells-the-father-of-devops-patrick-debois-105077.html](https://jaxenter.com/s-is-for-sharing-tells-the-father-of-devops-patrick-debois-105077.html)
 
-- https://www.youtube.com/watch?v=j2EVXvqwKwY
+- [https://www.youtube.com/watch?v=j2EVXvqwKwY](https://www.youtube.com/watch?v=j2EVXvqwKwY)
 
 #### Rubber Ducking
 
-- https://en.wikipedia.org/wiki/Rubber_duck_debugging
+- [https://en.wikipedia.org/wiki/Rubber_duck_debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging)
 
 #### David JP Phillips
 
-- https://www.presentationsteknik.com/
+- [https://www.presentationsteknik.com/](https://www.presentationsteknik.com/)
 
-- https://www.youtube.com/watch?v=Nj-hdQMa3uA
+- [https://www.youtube.com/watch?v=Nj-hdQMa3uA](https://www.youtube.com/watch?v=Nj-hdQMa3uA)
 
 #### Dr. Sherry Hamby
 
-- https://www.sherryhamby.com/
+- [https://www.sherryhamby.com/](https://www.sherryhamby.com/)
 
-- https://www.psychologytoday.com/blog/the-web-violence/201309/resilience-and-4-benefits-sharing-your-story
+- [https://www.psychologytoday.com/blog/the-web-violence/201309/resilience-and-4-benefits-sharing-your-story](https://www.psychologytoday.com/blog/the-web-violence/201309/resilience-and-4-benefits-sharing-your-story)
 
-- https://www.lifepathsresearch.org/
+- [https://www.lifepathsresearch.org/](https://www.lifepathsresearch.org/)
 
 #### Dr. Nicole Forsgren
 
-- https://nicolefv.com/
+- [https://nicolefv.com/](https://nicolefv.com/)
 
-- https://devops-research.com/
+- [https://devops-research.com/](https://devops-research.com/)
 
-- https://devops-research.com/2018/08/announcing-accelerate-state-of-devops-2018/
+- [https://devops-research.com/2018/08/announcing-accelerate-state-of-devops-2018/](https://devops-research.com/2018/08/announcing-accelerate-state-of-devops-2018/)
 
 #### Kris Howard
 
-- https://www.krishoward.org/
+- [https://www.krishoward.org/](https://www.krishoward.org/)
 
-- https://www.youtube.com/watch?v=zMReShyytQA
+- [https://www.youtube.com/watch?v=zMReShyytQA](https://www.youtube.com/watch?v=zMReShyytQA)
 
 #### State of Workplace Mental Health in Australia
 
-- https://www.headsup.org.au/docs/default-source/resources/bl1270-report---tns-the-state-of-mental-health-in-australian-workplaces-hr.pdf?sfvrsn=94e47a4d_8
+- [https://www.headsup.org.au/docs/default-source/resources/bl1270-report---tns-the-state-of-mental-health-in-australian-workplaces-hr.pdf?sfvrsn=94e47a4d_8](https://www.headsup.org.au/docs/default-source/resources/bl1270-report---tns-the-state-of-mental-health-in-australian-workplaces-hr.pdf?sfvrsn=94e47a4d_8)
 
 #### Valerie Aurora
 
-- https://valerieaurora.org/
+- [https://valerieaurora.org/](https://valerieaurora.org/)
 
-- https://frameshiftconsulting.com/meeting-skills/
+- [https://frameshiftconsulting.com/meeting-skills/](https://frameshiftconsulting.com/meeting-skills/)
