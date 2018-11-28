@@ -13,7 +13,7 @@ tags:
   - portland
   - sharing
 read_time: false
-#modified: 2017-mm-dd
+modified: 2018-11-28
 ---
 
 ### [Sharing: What's in it for me!?](https://www.devopsdays.org/events/2017-portland/program/glenn-sarti/)
