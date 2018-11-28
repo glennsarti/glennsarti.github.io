@@ -13,7 +13,7 @@ tags:
   - sydney
   - sharing
 read_time: false
-#modified: 2017-mm-dd
+modified: 2018-11-28
 ---
 
 ### [Sharing: What's in it for me!?](https://ndcsydney.com/talk/lightning-talks/)
@@ -30,7 +30,7 @@ A huge thank you to [Tiffany](https://twitter.com/thelongshanx) and [Michael](ht
 
 [Presentation](https://speakerdeck.com/glennsarti/ndc-sydney-sharing-whats-in-it-for-me)
 
-Recording - TBA
+[Recording](https://www.youtube.com/watch?v=cA9nSHz1Njk)
 
 ---
 

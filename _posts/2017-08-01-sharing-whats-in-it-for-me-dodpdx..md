@@ -28,7 +28,7 @@ This ignite talk looks at sharing through the eyes of a Sharer. What benefits do
 
 [Presentation](https://speakerdeck.com/glennsarti/sharing-whats-in-it-for-me)
 
-Recording - TBA
+[Recording](https://www.youtube.com/watch?v=JwbhKd5xqqY)
 
 ---
 
