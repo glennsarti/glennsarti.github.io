@@ -8,7 +8,7 @@ if Gem.win_platform?
 else
   gem "jekyll", "~> 3.5"
   # Remember to update the _config.yml with the same version
-  gem "minimal-mistakes-jekyll", "4.11.1"
+  gem "minimal-mistakes-jekyll", "4.14.1"
 end
 
 # Evaluate Gemfile.local if it exists
