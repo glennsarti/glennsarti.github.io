@@ -13,7 +13,7 @@ tags:
   - 2019
   - ships
 read_time: true
-modified: 2019-05-01
+modified: 2019-05-20
 ---
 
 ### [PowerShell Summit North America 2019](https://powershell.org/summit/)
@@ -26,7 +26,12 @@ A Shipwright an artisan skilled in one or more of the tasks required to build ve
 
 [Presentation](https://speakerdeck.com/glennsarti/how-to-become-a-ships-wright-building-with-ships)
 
-Recording - TBA
+[Recording](https://www.youtube.com/watch?v=iX62wii_r6g)
+
+## Reviews
+
+<blockquote class="twitter-tweet" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/GlennSarti?ref_src=twsrc%5Etfw">@GlennSarti</a> I&#39;ve been meaning to look into SHiPS! This really helped!!!<a href="https://t.co/nV9VhVHTdz">https://t.co/nV9VhVHTdz</a></p>&mdash; Irwin Strachan (@IrwinStrachan) <a href="https://twitter.com/IrwinStrachan/status/1130043257612840960?ref_src=twsrc%5Etfw">May 19, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## Resources
 

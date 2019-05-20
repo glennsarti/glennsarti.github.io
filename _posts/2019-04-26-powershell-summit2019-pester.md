@@ -13,7 +13,7 @@ tags:
   - 2019
   - pester
 read_time: true
-modified: 2019-04-30
+modified: 2019-05-20
 ---
 
 ### [PowerShell Summit North America 2019](https://powershell.org/summit/)
@@ -26,7 +26,12 @@ Previously in "Beyond Pester 101: Applying testing principles to PowerShell" I t
 
 [Presentation](https://speakerdeck.com/glennsarti/beyond-pester-102-acceptance-testing-with-powershell)
 
-Recording - TBA
+[Recording](https://www.youtube.com/watch?v=L-1nXtaQ6YM)
+
+## Reviews
+
+<blockquote class="twitter-tweet" data-conversation="none" data-cards="hidden" data-partner="tweetdeck"><p lang="en" dir="ltr">Acceptance test is the bread and butter for User stories and defining your MVP... BDD helped me to define what the MVP looks like.. I tend to over-engineer stuff... Not helpful in trying to make the sprint goal... You nailed it!!</p>&mdash; Irwin Strachan (@IrwinStrachan) <a href="https://twitter.com/IrwinStrachan/status/1130048853586128896?ref_src=twsrc%5Etfw">May 19, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## Resources
 
