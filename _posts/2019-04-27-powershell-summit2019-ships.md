@@ -33,6 +33,9 @@ A Shipwright an artisan skilled in one or more of the tasks required to build ve
 <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/GlennSarti?ref_src=twsrc%5Etfw">@GlennSarti</a> I&#39;ve been meaning to look into SHiPS! This really helped!!!<a href="https://t.co/nV9VhVHTdz">https://t.co/nV9VhVHTdz</a></p>&mdash; Irwin Strachan (@IrwinStrachan) <a href="https://twitter.com/IrwinStrachan/status/1130043257612840960?ref_src=twsrc%5Etfw">May 19, 2019</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+<blockquote class="twitter-tweet" data-conversation="none" data-cards="hidden" data-partner="tweetdeck"><p lang="en" dir="ltr">The SHiPS wright talk is DAG-gum amazing. It inspired <a href="https://twitter.com/steviecoaster?ref_src=twsrc%5Etfw">@steviecoaster</a> to try it for Chocolatey. Did the recording catch you arguing with <a href="https://twitter.com/jsnover?ref_src=twsrc%5Etfw">@jsnover</a> in the Q&amp;A? Were you &quot;wright?&quot; 🤣</p>&mdash; Steven Judd (@stevenjudd) <a href="https://twitter.com/stevenjudd/status/1130660495302766596?ref_src=twsrc%5Etfw">May 21, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 ## Resources
 
 Ravikanth Chaganti
