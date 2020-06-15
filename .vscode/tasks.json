@@ -6,7 +6,7 @@
     {
       "label": "Serve",
       "type": "shell",
-      "command": "bundle exec jekyll serve --livereload --trace --safe --config _config.yml,_config.dev.yml --unpublished --future",
+      "command": "bundle exec jekyll serve --livereload --trace --safe --config _config.yml,_config.dev.yml --unpublished --future --port 4000 --livereload_port 4001",
       "group": {
         "kind": "test",
         "isDefault": true
