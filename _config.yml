@@ -258,7 +258,7 @@ defaults:
       related: true
       classes: wide
       header:
-        image: pageimage-default.jpg
+        image: images/pageimage-default.jpg
         # Must be added to posts
         # overlay_image: header-default.png
         # overlay_filter: 0.5
