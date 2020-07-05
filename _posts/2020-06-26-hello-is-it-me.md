@@ -13,7 +13,7 @@ tags:
 
 So, it's been a while since my last real blog post, nearly a year and a half!
 Where have I been? Well, quite a lot has happened since January 2019.
-I'm no longer working at Puppet, and I'm now a Senior Consultant with [Telstra Puple](https://purple.telstra.com.au)
+I'm no longer working at Puppet, and I'm now a Senior Consultant with [Telstra Purple](https://purple.telstra.com.au)
 But first I want to talk about how I ended up at Purple.
 
 ## A story of discovery ...
