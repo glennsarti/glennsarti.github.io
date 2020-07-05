@@ -27,7 +27,7 @@ And after thinking and searching, and quite frankly a butt-load of time, it came
 
 **My technical skills were increasing in areas that aren't really in demand**
 
-My skills in Ruby were getting better and better. But there as a big problem. Even a simple search on job-seeker sites showed that very few people are looking for ruby programmers, particularly ones with no Ruby on Rails experience. But then I looked at what I considered my technical strengths: `A Windows first infrastructure programmer, proficient in PowerShell and Ruby. In Open Source development environments.`
+My skills in Ruby were getting better and better. But there was a big problem. Even a simple search on job-seeker sites showed that very few people are looking for ruby programmers, particularly ones with no Ruby on Rails experience. But then I looked at what I considered my technical strengths: `A Windows first infrastructure programmer, proficient in PowerShell and Ruby. In Open Source development environments.`
 
 There wasn't much (to be honest, ANY) demand for this whole combination. Which lead me to a second realisation
 
@@ -45,7 +45,7 @@ I don't consider myself an extrovert, but even introverts need social connection
 
 ## Taking action
 
-So with that I went on the job search. I was being very particular about which companies to apply for. Because Puppet was still a good place to be. I could still make a difference to lives of thousands of Puppet users with the work I was doing. So I had the benefit of time.
+So with that I went on the job search. I was being very particular about which companies to apply for. Because Puppet was still a good place to be. I could still make a difference to the lives of thousands of Puppet users with the work I was doing. So I had the benefit of time.
 
 I knew a few people who worked at Telstra Purple (nee Readify) both from previous jobs and from various conferences. I respected these people and looked up to them (One of them is even a mentor of mine!) and looked like a great opportunity for me to spread my infrastructure wings and find the purpose I was looking for!
 
