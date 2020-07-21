@@ -8,3 +8,4 @@ _site
 assets/css/main.css
 Gemfile.local
 Gemfile.lock
+.jekyll-cache
