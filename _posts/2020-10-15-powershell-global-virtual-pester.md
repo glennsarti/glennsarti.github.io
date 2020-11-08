@@ -13,6 +13,7 @@ tags:
   - 2020
   - pester
 read_time: false
+modified: 2020-11-8
 ---
 
 ### [PowerShell & DevOps Global Conference 2020 - Online Edition](https://powershell.org/24hour/)
@@ -25,7 +26,7 @@ We see a lot talks on testing PowerShell with Pester, but are the tests we write
 
 [Presentation](https://speakerdeck.com/glennsarti/ps-virtual-global-20-beyond-pester-101-applying-testing-principles-to-powershell)
 
-Recording - TBA
+[Recording](https://www.youtube.com/watch?v=faYw8D2vM18&list=PLfeA8kIs7CodaH2nEt0bWxV5Yjcq3bcmr&index=12)
 
 ## Resources
 
