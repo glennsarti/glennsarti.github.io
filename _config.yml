@@ -85,7 +85,7 @@ analytics:
 author:
   name             : "Glenn Sarti"
   avatar           : "/images/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Windows Software and Infrastructure Developer.<br /><br />With a penchant for DevOps, Puppet, Neo4j or anything Windows related."
+  bio              : "Cross-Platform Software and Infrastructure Developer.<br /><br />With a penchant for DevOps, Puppet, Neo4j or anything Windows related."
   location         : "Perth, Western Australia"
   email            :
   uri              :
