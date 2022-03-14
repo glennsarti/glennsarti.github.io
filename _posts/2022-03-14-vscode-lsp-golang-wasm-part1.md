@@ -33,4 +33,13 @@ You could run Ruby programs in the Web Browser without needing Ruby installed! ð
 ### Fast forward to now ...
 
 But that was then, and this is now! I'm now a developer at HashiCorp so I'm doing a lot more in Go. I started writing a language server for one of our languages and quickly I found a familiar problem: "How do I get my language server installed?".
-And that's when I remembered about WASM! Go even has native support for compiling to WASM
+And that's when I remembered about WASM! Go even has native support for compiling to WASM.
+
+After many days of struggling and reading and interating I eventually got something working but it was ... complicated. This blog series will explain how all the parts work together, some useful debugging tips I discovered along the way, and some things to _not_ do.
+
+
+----
+
+How does LSP communicate
+TCP vs STDIO..  where does WASM fit in
+What's a web worker
