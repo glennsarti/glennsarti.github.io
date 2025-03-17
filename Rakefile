@@ -7,7 +7,7 @@ task :clean do
   system 'jekyll clean'
 end
 
-basicSettings = '--trace --safe'
+basicSettings = '' #'--trace --safe'
 devConfig = '--config _config.yml,_config.dev.yml --unpublished --future'
 
 namespace :build do

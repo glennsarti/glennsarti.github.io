@@ -10,7 +10,7 @@ locale                   : "en"
 title                    : "Glenn Sarti"
 title_separator          : "-"
 name                     : "Blog site for Glenn Sarti"
-description              : "Stuff about Windows, Devops, Puppet and Neo4j related"
+description              : "Stuff about Software Development and Devops related"
 url                      : "https://sarti.dev"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -50,9 +50,9 @@ atom_feed:
 # Minimal Mistakes Theme information
 # The `theme` property must not be set here otherwise github pages complains
 # Remember to update the _config.yml with the same version
-remote_theme: mmistakes/minimal-mistakes@4.19.3
+remote_theme: mmistakes/minimal-mistakes@4.26.2
 minimal_mistakes_skin: "dark"
-
+#"/var/lib/gems/3.1.0/gems/minimal-mistakes-jekyll-4.19.3/_includes"
 # SEO Related
 google_site_verification :
 bing_site_verification   :
@@ -85,7 +85,7 @@ analytics:
 author:
   name             : "Glenn Sarti"
   avatar           : "/images/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Windows Software and Infrastructure Developer.<br /><br />With a penchant for DevOps, Puppet, Neo4j or anything Windows related."
+  bio              : "Senior Software and Infrastructure Developer.<br /><br />With a penchant for DevOps, Software Engineering, or anything Windows related."
   location         : "Perth, Western Australia"
   email            :
   uri              :

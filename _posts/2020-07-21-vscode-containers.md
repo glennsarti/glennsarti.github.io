@@ -8,7 +8,7 @@ header:
   overlay_image: /images/header-vscode.png
   teaser: /images/teaser-vscode-update.png
 tags:
-  - 2020
+  - "2020"
   - wsl2
   - vscode
 ---
