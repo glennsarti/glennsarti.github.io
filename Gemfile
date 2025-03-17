@@ -6,10 +6,10 @@ if Gem.win_platform?
   # Jekyll really hates Windows :-(  Need to use WSL instead
   raise 'Jekyll really hates Windows :-(  Need to use WSL instead'
 else
-  gem "jekyll"
+  gem "jekyll", "~> 4"
   gem "jemoji"
   # Remember to update the _config.yml with the same version
-  gem "minimal-mistakes-jekyll", "4.19.3"
+  gem "minimal-mistakes-jekyll", "4.26.2"
 end
 
 # Evaluate Gemfile.local if it exists

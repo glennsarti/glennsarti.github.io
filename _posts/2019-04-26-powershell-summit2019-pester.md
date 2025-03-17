@@ -10,7 +10,7 @@ header:
 tags:
   - powershell
   - summit
-  - 2019
+  - "2019"
   - pester
 read_time: true
 modified: 2019-05-20

@@ -10,7 +10,7 @@ header:
 tags:
   - powershell
   - summit
-  - 2018
+  - "2018"
   - lean coffee
 read_time: false
 ---

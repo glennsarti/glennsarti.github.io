@@ -8,7 +8,7 @@ header:
   overlay_image: /images/header-monocle.png
   teaser: /images/teaser-searching.png
 tags:
-  - 2020
+  - "2020"
 ---
 
 So, it's been a while since my last real blog post, nearly a year and a half!
